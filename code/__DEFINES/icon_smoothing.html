@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>code&#x2F;__DEFINES&#x2F;icon_smoothing.dm - Citadel Station 13 - HRP</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Citadel Station 13 - HRP</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="code/__DEFINES/icon_smoothing.html#define">Define Details</a></header>
+<main>
+<h1>code/__DEFINES/icon_smoothing.dm 
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/icon_smoothing.dm">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;icon_smoothing.dm"/></a></h1>
+
+<table class="summary" cellspacing="0">
+        <tr><th><a href="code/__DEFINES/icon_smoothing.html#define/SMOOTH_CORNERS">SMOOTH_CORNERS</a></th><td>Smoothing system in where adjacencies are calculated and used to build an image by mounting each corner at runtime.</td></tr>
+        <tr><th><a href="code/__DEFINES/icon_smoothing.html#define/SMOOTH_BITMASK">SMOOTH_BITMASK</a></th><td>Smoothing system in where adjacencies are calculated and used to select a pre-baked icon_state, encoded by bitmasking.</td></tr>
+        <tr><th><a href="code/__DEFINES/icon_smoothing.html#define/SMOOTH_DIAGONAL_CORNERS">SMOOTH_DIAGONAL_CORNERS</a></th><td>Atom has diagonal corners, with underlays under them.</td></tr>
+        <tr><th><a href="code/__DEFINES/icon_smoothing.html#define/SMOOTH_BORDER">SMOOTH_BORDER</a></th><td>Atom will smooth with the borders of the map.</td></tr>
+        <tr><th><a href="code/__DEFINES/icon_smoothing.html#define/SMOOTH_QUEUED">SMOOTH_QUEUED</a></th><td>Atom is currently queued to smooth.</td></tr>
+        <tr><th><a href="code/__DEFINES/icon_smoothing.html#define/SMOOTH_OBJ">SMOOTH_OBJ</a></th><td>Smooths with objects, and will thus need to scan turfs for contents.</td></tr>
+        <tr><th><a href="code/__DEFINES/icon_smoothing.html#define/S_TURF">S_TURF</a></th><td>*SMOOTHING GROUPS</td></tr>
+        <tr><th><a href="code/__DEFINES/icon_smoothing.html#define/SMOOTH_GROUP_SANDBAGS">SMOOTH_GROUP_SANDBAGS</a></th><td>obj/structure/sandbag</td></tr></table><h2 id="define">Define Details</h2>
+<h3 id="define/SMOOTH_BITMASK"><aside class="declaration">#define </aside>SMOOTH_BITMASK
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/icon_smoothing.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;icon_smoothing.dm 5"/></a>
+    </h3>
+    <p>Smoothing system in where adjacencies are calculated and used to select a pre-baked icon_state, encoded by bitmasking.</p><h3 id="define/SMOOTH_BORDER"><aside class="declaration">#define </aside>SMOOTH_BORDER
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/icon_smoothing.dm#L9">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;icon_smoothing.dm 9"/></a>
+    </h3>
+    <p>Atom will smooth with the borders of the map.</p><h3 id="define/SMOOTH_CORNERS"><aside class="declaration">#define </aside>SMOOTH_CORNERS
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/icon_smoothing.dm#L3">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;icon_smoothing.dm 3"/></a>
+    </h3>
+    <p>Smoothing system in where adjacencies are calculated and used to build an image by mounting each corner at runtime.</p><h3 id="define/SMOOTH_DIAGONAL_CORNERS"><aside class="declaration">#define </aside>SMOOTH_DIAGONAL_CORNERS
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/icon_smoothing.dm#L7">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;icon_smoothing.dm 7"/></a>
+    </h3>
+    <p>Atom has diagonal corners, with underlays under them.</p><h3 id="define/SMOOTH_GROUP_SANDBAGS"><aside class="declaration">#define </aside>SMOOTH_GROUP_SANDBAGS
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/icon_smoothing.dm#L47">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;icon_smoothing.dm 47"/></a>
+    </h3>
+    <p>obj/structure/sandbag</p><h3 id="define/SMOOTH_OBJ"><aside class="declaration">#define </aside>SMOOTH_OBJ
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/icon_smoothing.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;icon_smoothing.dm 13"/></a>
+    </h3>
+    <p>Smooths with objects, and will thus need to scan turfs for contents.</p><h3 id="define/SMOOTH_QUEUED"><aside class="declaration">#define </aside>SMOOTH_QUEUED
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/icon_smoothing.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;icon_smoothing.dm 11"/></a>
+    </h3>
+    <p>Atom is currently queued to smooth.</p><h3 id="define/S_TURF"><aside class="declaration">#define </aside>S_TURF
+            <aside>(num)</aside>
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/icon_smoothing.dm#L37">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;icon_smoothing.dm 37"/></a>
+    </h3>
+    <p>*SMOOTHING GROUPS</p>
+<ul>
+<li>Groups of things to smooth with.</li>
+<li>
+<ul>
+<li>Contained in the <code>list/smoothing_groups</code> variable.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Matched with the <code>list/canSmoothWith</code> variable to check whether smoothing is possible or not.</li>
+</ul>
+</li>
+</ul></main>
+<footer>
+    vorestation.dme
+    <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/326815dfb7907ff359a42d9b7d259f645c74414c">326815d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.3.0</a></footer>
+</body>
+</html>

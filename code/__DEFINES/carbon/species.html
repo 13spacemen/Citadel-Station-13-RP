@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm - Citadel Station 13 - HRP</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Citadel Station 13 - HRP</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="code/__DEFINES/carbon/species.html#define">Define Details</a></header>
+<main>
+<h1>code/__DEFINES/carbon/species.dm 
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm"/></a></h1>
+
+<table class="summary" cellspacing="0">
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/NO_MINOR_CUT">NO_MINOR_CUT</a></th><td>Can step on broken glass with no ill-effects. Either thick skin (diona), cut resistant (slimes) or incorporeal (shadows)</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/IS_PLANT">IS_PLANT</a></th><td>Is a treeperson.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/NO_SCAN">NO_SCAN</a></th><td>Cannot be scanned in a DNA machine/genome-stolen.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/NO_PAIN">NO_PAIN</a></th><td>Cannot suffer halloss/recieves deceptive health indicator.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/NO_SLIP">NO_SLIP</a></th><td>Cannot fall over.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/NO_POISON">NO_POISON</a></th><td>Cannot not suffer toxloss.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/NO_EMBED">NO_EMBED</a></th><td>Can step on broken glass with no ill-effects and cannot have shrapnel embedded in it.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/NO_HALLUCINATION">NO_HALLUCINATION</a></th><td>Don't hallucinate, ever.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/NO_BLOOD">NO_BLOOD</a></th><td>Never bleed, never show blood amount.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/UNDEAD">UNDEAD</a></th><td>Various things that living things don't do, mostly for skeletons.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/NO_INFECT">NO_INFECT</a></th><td>Don't allow infections in limbs or organs, similar to IS_PLANT, without other strings.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/NO_DEFIB">NO_DEFIB</a></th><td>Cannot be defibbed.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/CONTAMINATION_IMMUNE">CONTAMINATION_IMMUNE</a></th><td>(Phoron) Contamination doesnt affect them.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/SPECIES_IS_WHITELISTED">SPECIES_IS_WHITELISTED</a></th><td>Must be whitelisted to play.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/SPECIES_IS_RESTRICTED">SPECIES_IS_RESTRICTED</a></th><td>Is not a core/normally playable species. (castes, mutantraces)</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/SPECIES_CAN_JOIN">SPECIES_CAN_JOIN</a></th><td>Species is selectable in chargen.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/SPECIES_NO_FBP_CONSTRUCTION">SPECIES_NO_FBP_CONSTRUCTION</a></th><td>FBP of this species can't be made in-game.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/SPECIES_NO_FBP_CHARGEN">SPECIES_NO_FBP_CHARGEN</a></th><td>FBP of this species can't be selected at chargen.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/SPECIES_NO_ROBOTIC_INTERNAL_ORGANS">SPECIES_NO_ROBOTIC_INTERNAL_ORGANS</a></th><td>Species cannot start with robotic organs or have them attached.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/SPECIES_WHITELIST_SELECTABLE">SPECIES_WHITELIST_SELECTABLE</a></th><td>Can select and customize, but not join as</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/HAS_SKIN_TONE">HAS_SKIN_TONE</a></th><td>Skin tone selectable in chargen. (0-255)</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/HAS_SKIN_COLOR">HAS_SKIN_COLOR</a></th><td>Skin colour selectable in chargen. (RGB)</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/HAS_LIPS">HAS_LIPS</a></th><td>Lips are drawn onto the mob icon. (lipstick)</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/HAS_UNDERWEAR">HAS_UNDERWEAR</a></th><td>Underwear is drawn onto the mob icon.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/HAS_EYE_COLOR">HAS_EYE_COLOR</a></th><td>Eye colour selectable in chargen. (RGB)</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/HAS_HAIR_COLOR">HAS_HAIR_COLOR</a></th><td>Hair colour selectable in chargen. (RGB)</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/RADIATION_GLOWS">RADIATION_GLOWS</a></th><td>Radiation causes this character to glow.</td></tr>
+        <tr><th><a href="code/__DEFINES/carbon/species.html#define/BASE_SKIN_COLOR">BASE_SKIN_COLOR</a></th><td>Sets default skin colors based on icons.</td></tr></table><h2 id="define">Define Details</h2>
+<h3 id="define/BASE_SKIN_COLOR"><aside class="declaration">#define </aside>BASE_SKIN_COLOR
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L64">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 64"/></a>
+    </h3>
+    <p>Sets default skin colors based on icons.</p><h3 id="define/CONTAMINATION_IMMUNE"><aside class="declaration">#define </aside>CONTAMINATION_IMMUNE
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L27">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 27"/></a>
+    </h3>
+    <p>(Phoron) Contamination doesnt affect them.</p><h3 id="define/HAS_EYE_COLOR"><aside class="declaration">#define </aside>HAS_EYE_COLOR
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L58">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 58"/></a>
+    </h3>
+    <p>Eye colour selectable in chargen. (RGB)</p><h3 id="define/HAS_HAIR_COLOR"><aside class="declaration">#define </aside>HAS_HAIR_COLOR
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L60">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 60"/></a>
+    </h3>
+    <p>Hair colour selectable in chargen. (RGB)</p><h3 id="define/HAS_LIPS"><aside class="declaration">#define </aside>HAS_LIPS
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L54">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 54"/></a>
+    </h3>
+    <p>Lips are drawn onto the mob icon. (lipstick)</p><h3 id="define/HAS_SKIN_COLOR"><aside class="declaration">#define </aside>HAS_SKIN_COLOR
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L52">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 52"/></a>
+    </h3>
+    <p>Skin colour selectable in chargen. (RGB)</p><h3 id="define/HAS_SKIN_TONE"><aside class="declaration">#define </aside>HAS_SKIN_TONE
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L50">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 50"/></a>
+    </h3>
+    <p>Skin tone selectable in chargen. (0-255)</p><h3 id="define/HAS_UNDERWEAR"><aside class="declaration">#define </aside>HAS_UNDERWEAR
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L56">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 56"/></a>
+    </h3>
+    <p>Underwear is drawn onto the mob icon.</p><h3 id="define/IS_PLANT"><aside class="declaration">#define </aside>IS_PLANT
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 5"/></a>
+    </h3>
+    <p>Is a treeperson.</p><h3 id="define/NO_BLOOD"><aside class="declaration">#define </aside>NO_BLOOD
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L19">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 19"/></a>
+    </h3>
+    <p>Never bleed, never show blood amount.</p><h3 id="define/NO_DEFIB"><aside class="declaration">#define </aside>NO_DEFIB
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L25">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 25"/></a>
+    </h3>
+    <p>Cannot be defibbed.</p><h3 id="define/NO_EMBED"><aside class="declaration">#define </aside>NO_EMBED
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L15">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 15"/></a>
+    </h3>
+    <p>Can step on broken glass with no ill-effects and cannot have shrapnel embedded in it.</p><h3 id="define/NO_HALLUCINATION"><aside class="declaration">#define </aside>NO_HALLUCINATION
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 17"/></a>
+    </h3>
+    <p>Don't hallucinate, ever.</p><h3 id="define/NO_INFECT"><aside class="declaration">#define </aside>NO_INFECT
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 23"/></a>
+    </h3>
+    <p>Don't allow infections in limbs or organs, similar to IS_PLANT, without other strings.</p><h3 id="define/NO_MINOR_CUT"><aside class="declaration">#define </aside>NO_MINOR_CUT
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L3">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 3"/></a>
+    </h3>
+    <p>Can step on broken glass with no ill-effects. Either thick skin (diona), cut resistant (slimes) or incorporeal (shadows)</p><h3 id="define/NO_PAIN"><aside class="declaration">#define </aside>NO_PAIN
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L9">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 9"/></a>
+    </h3>
+    <p>Cannot suffer halloss/recieves deceptive health indicator.</p><h3 id="define/NO_POISON"><aside class="declaration">#define </aside>NO_POISON
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 13"/></a>
+    </h3>
+    <p>Cannot not suffer toxloss.</p><h3 id="define/NO_SCAN"><aside class="declaration">#define </aside>NO_SCAN
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L7">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 7"/></a>
+    </h3>
+    <p>Cannot be scanned in a DNA machine/genome-stolen.</p><h3 id="define/NO_SLIP"><aside class="declaration">#define </aside>NO_SLIP
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 11"/></a>
+    </h3>
+    <p>Cannot fall over.</p><h3 id="define/RADIATION_GLOWS"><aside class="declaration">#define </aside>RADIATION_GLOWS
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L62">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 62"/></a>
+    </h3>
+    <p>Radiation causes this character to glow.</p><h3 id="define/SPECIES_CAN_JOIN"><aside class="declaration">#define </aside>SPECIES_CAN_JOIN
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L37">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 37"/></a>
+    </h3>
+    <p>Species is selectable in chargen.</p><h3 id="define/SPECIES_IS_RESTRICTED"><aside class="declaration">#define </aside>SPECIES_IS_RESTRICTED
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L35">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 35"/></a>
+    </h3>
+    <p>Is not a core/normally playable species. (castes, mutantraces)</p><h3 id="define/SPECIES_IS_WHITELISTED"><aside class="declaration">#define </aside>SPECIES_IS_WHITELISTED
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L33">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 33"/></a>
+    </h3>
+    <p>Must be whitelisted to play.</p><h3 id="define/SPECIES_NO_FBP_CHARGEN"><aside class="declaration">#define </aside>SPECIES_NO_FBP_CHARGEN
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L41">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 41"/></a>
+    </h3>
+    <p>FBP of this species can't be selected at chargen.</p><h3 id="define/SPECIES_NO_FBP_CONSTRUCTION"><aside class="declaration">#define </aside>SPECIES_NO_FBP_CONSTRUCTION
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L39">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 39"/></a>
+    </h3>
+    <p>FBP of this species can't be made in-game.</p><h3 id="define/SPECIES_NO_ROBOTIC_INTERNAL_ORGANS"><aside class="declaration">#define </aside>SPECIES_NO_ROBOTIC_INTERNAL_ORGANS
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L43">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 43"/></a>
+    </h3>
+    <p>Species cannot start with robotic organs or have them attached.</p><h3 id="define/SPECIES_WHITELIST_SELECTABLE"><aside class="declaration">#define </aside>SPECIES_WHITELIST_SELECTABLE
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L45">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 45"/></a>
+    </h3>
+    <p>Can select and customize, but not join as</p><h3 id="define/UNDEAD"><aside class="declaration">#define </aside>UNDEAD
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__DEFINES/carbon/species.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;carbon&#x2F;species.dm 21"/></a>
+    </h3>
+    <p>Various things that living things don't do, mostly for skeletons.</p></main>
+<footer>
+    vorestation.dme
+    <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/326815dfb7907ff359a42d9b7d259f645c74414c">326815d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.3.0</a></footer>
+</body>
+</html>

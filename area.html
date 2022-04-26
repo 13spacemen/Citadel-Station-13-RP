@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;area - Citadel Station 13 - HRP</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Citadel Station 13 - HRP</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="area.html#var">Var Details</a> - <a href="area.html#proc">Proc Details</a></header>
+<main>
+<h1>Unknown <aside>/<a href="area.html">area</a></aside><aside> inherits /<a href="atom.html">atom</a></aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/area/areas.dm#L3">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;area&#x2F;areas.dm 3"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="area.html#var/area_limited_icon_smoothing">area_limited_icon_smoothing</a></th><td>Typepath to limit the areas (subtypes included) that atoms in this area can smooth with. Used for shuttles.</td></tr>
+            <tr><th><a href="area.html#var/minimap_color">minimap_color</a></th><td>Color on minimaps, if it's null (which is default) it makes one at random.</td></tr>
+            <tr><th><a href="area.html#var/parallax_move_angle">parallax_move_angle</a></th><td>Parallax move dir - degrees clockwise from north</td></tr>
+            <tr><th><a href="area.html#var/parallax_move_speed">parallax_move_speed</a></th><td>Parallax move speed - 0 to disable</td></tr>
+            <tr><th><a href="area.html#var/parallax_moving">parallax_moving</a></th><td>Parallax moving?</td></tr>
+            <tr><th><a href="area.html#var/unique">unique</a></th><td>If false, loading multiple maps with this area type will create multiple instances.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="area.html#proc/Destroy">Destroy</a></th><td>Destroy an area and clean it up</td></tr>
+            <tr><th><a href="area.html#proc/Exited">Exited</a></th><td>Called when an atom exits an area</td></tr>
+            <tr><th><a href="area.html#proc/New">New</a></th><td>Called when an area loads</td></tr>
+            <tr><th><a href="area.html#proc/copy_contents_to">copy_contents_to</a></th><td>Takes: Area. Optional: If it should copy to areas that don't have plating
+Returns: Nothing.
+Notes: Attempts to move the contents of one area to another area.
+Movement based on lower left corner. Tiles that do not fit
+into the new area will not be moved.</td></tr>
+            <tr><th><a href="area.html#proc/move_contents_to">move_contents_to</a></th><td>Takes: Area. Optional: turf type to leave behind.
+Returns: Nothing.
+Notes: Attempts to move the contents of one area to another area.
+Movement based on lower left corner. Tiles that do not fit
+into the new area will not be moved.</td></tr>
+            <tr><th><a href="area.html#proc/reg_in_areas_in_z">reg_in_areas_in_z</a></th><td>Register this area as belonging to a z level</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/area_limited_icon_smoothing"><aside class="declaration">var </aside>area_limited_icon_smoothing
+            <aside>&ndash; /<a href="area.html">area</a></aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/area/areas.dm#L71">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;area&#x2F;areas.dm 71"/></a></h3>
+        <p>Typepath to limit the areas (subtypes included) that atoms in this area can smooth with. Used for shuttles.</p><h3 id="var/minimap_color"><aside class="declaration">var </aside>minimap_color
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/area/areas.dm#L66">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;area&#x2F;areas.dm 66"/></a></h3>
+        <p>Color on minimaps, if it's null (which is default) it makes one at random.</p><h3 id="var/parallax_move_angle"><aside class="declaration">var </aside>parallax_move_angle
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/area/areas.dm#L43">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;area&#x2F;areas.dm 43"/></a></h3>
+        <p>Parallax move dir - degrees clockwise from north</p><h3 id="var/parallax_move_speed"><aside class="declaration">var </aside>parallax_move_speed
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/area/areas.dm#L41">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;area&#x2F;areas.dm 41"/></a></h3>
+        <p>Parallax move speed - 0 to disable</p><h3 id="var/parallax_moving"><aside class="declaration">var </aside>parallax_moving
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/area/areas.dm#L39">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;area&#x2F;areas.dm 39"/></a></h3>
+        <p>Parallax moving?</p><h3 id="var/unique"><aside class="declaration">var </aside>unique
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/area/areas.dm#L63">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;area&#x2F;areas.dm 63"/></a></h3>
+        <p>If false, loading multiple maps with this area type will create multiple instances.</p><h2 id="proc">Proc Details</h2><h3 id="proc/Destroy"><aside class="parent"><a title="/atom" href="atom.html#proc/Destroy">&uarr;</a></aside>Destroy<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/area/areas.dm#L152">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;area&#x2F;areas.dm 152"/></a></aside>
+        </h3>
+        <p>Destroy an area and clean it up</p>
+<p>Removes the area from GLOB.areas_by_type and also stops it processing on SSobj</p>
+<p>This is despite the fact that no code appears to put it on SSobj, but
+who am I to argue with old coders</p><h3 id="proc/Exited"><aside class="parent"><a title="/atom" href="atom.html#proc/Exited">&uarr;</a></aside>Exited<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/M) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/area/areas_movement.dm#L53">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;area&#x2F;areas_movement.dm 53"/></a></aside>
+        </h3>
+        <p>Called when an atom exits an area</p>
+<p>Sends signals COMSIG_AREA_EXITED and COMSIG_EXIT_AREA (to the atom)</p><h3 id="proc/New">New<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/area/areas.dm#L76">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;area&#x2F;areas.dm 76"/></a></aside>
+        </h3>
+        <p>Called when an area loads</p>
+<p>Adds the item to the GLOB.areas_by_type list based on area type</p><h3 id="proc/copy_contents_to"><aside class="declaration">proc </aside>copy_contents_to<aside>(/<a href="area.html">area</a>/A, platingRequired) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__HELPERS/unsorted.dm#L863">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 863"/></a></aside>
+        </h3>
+        <p>Takes: Area. Optional: If it should copy to areas that don't have plating
+Returns: Nothing.
+Notes: Attempts to move the contents of one area to another area.
+Movement based on lower left corner. Tiles that do not fit
+into the new area will not be moved.</p>
+<p>Does <em>not</em> affect gases etc; copied turfs will be changed via ChangeTurf,
+and the dir, icon, and icon_state copied. All other vars will remain default.</p><h3 id="proc/move_contents_to"><aside class="declaration">proc </aside>move_contents_to<aside>(/<a href="area.html">area</a>/A, turftoleave, direction) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__HELPERS/unsorted.dm#L711">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 711"/></a></aside>
+        </h3>
+        <p>Takes: Area. Optional: turf type to leave behind.
+Returns: Nothing.
+Notes: Attempts to move the contents of one area to another area.
+Movement based on lower left corner. Tiles that do not fit
+into the new area will not be moved.</p><h3 id="proc/reg_in_areas_in_z"><aside class="declaration">proc </aside>reg_in_areas_in_z<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/area/areas.dm#L132">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;area&#x2F;areas.dm 132"/></a></aside>
+        </h3>
+        <p>Register this area as belonging to a z level</p>
+<p>Ensures the item is added to the SSmapping.areas_in_z list for this z</p></main>
+<footer>
+    vorestation.dme
+    <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/326815dfb7907ff359a42d9b7d259f645c74414c">326815d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.3.0</a></footer>
+</body>
+</html>

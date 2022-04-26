@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;reagent - Citadel Station 13 - HRP</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Citadel Station 13 - HRP</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/reagent.html#var">Var Details</a> - <a href="datum/reagent.html#proc">Proc Details</a></header>
+<main>
+<h1>Reagent <aside>/<a href="datum.html">datum</a>/<a href="datum/reagent.html">reagent</a></aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/food/drinkingglass/metaglass.dm#L52">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;food&#x2F;drinkingglass&#x2F;metaglass.dm 52"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/reagent.html#var/affects_dead">affects_dead</a></th><td>Does this chem process inside a corpse?</td></tr>
+            <tr><th><a href="datum/reagent.html#var/affects_robots">affects_robots</a></th><td>Does this chem process inside a Synth?</td></tr>
+            <tr><th><a href="datum/reagent.html#var/blood_content">blood_content</a></th><td>Used for vampric-Digestion</td></tr>
+            <tr><th><a href="datum/reagent.html#var/can_overdose_touch">can_overdose_touch</a></th><td>Can the chemical OD when processing on touch?</td></tr>
+            <tr><th><a href="datum/reagent.html#var/filtered_organs">filtered_organs</a></th><td>Organs that will slow the processing of this chemical.</td></tr>
+            <tr><th><a href="datum/reagent.html#var/mrate_static">mrate_static</a></th><td>If the reagent should always process at the same speed, regardless of species, make this TRUE</td></tr>
+            <tr><th><a href="datum/reagent.html#var/overdose">overdose</a></th><td>Amount at which overdose starts</td></tr>
+            <tr><th><a href="datum/reagent.html#var/overdose_mod">overdose_mod</a></th><td>Modifier to overdose damage</td></tr>
+            <tr><th><a href="datum/reagent.html#var/scannable">scannable</a></th><td>Shows up on health analyzers.</td></tr>
+            <tr><th><a href="datum/reagent.html#var/taste_mult">taste_mult</a></th><td>How this taste compares to others. Higher values means it is more noticable</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/reagent.html#proc/on_mob_life">on_mob_life</a></th><td>Currently, on_mob_life is called on carbons. Any interaction with non-carbon mobs (lube) will need to be done in touch_mob.</td></tr>
+            <tr><th><a href="datum/reagent.html#proc/touch_mob">touch_mob</a></th><td>This doesn't apply to skin contact - this is for, e.g. extinguishers and sprays. The difference is that reagent is not directly on the mob's skin - it might just be on their clothing.</td></tr>
+            <tr><th><a href="datum/reagent.html#proc/touch_obj">touch_obj</a></th><td>Acid melting, cleaner cleaning, etc</td></tr>
+            <tr><th><a href="datum/reagent.html#proc/touch_turf">touch_turf</a></th><td>Cleaner cleaning, lube lubbing, etc, all go here</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/affects_dead"><aside class="declaration">var </aside>affects_dead
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/reagents/Chemistry-Reagents.dm#L35">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;Chemistry-Reagents.dm 35"/></a></h3>
+        <p>Does this chem process inside a corpse?</p><h3 id="var/affects_robots"><aside class="declaration">var </aside>affects_robots
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/reagents/Chemistry-Reagents.dm#L37">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;Chemistry-Reagents.dm 37"/></a></h3>
+        <p>Does this chem process inside a Synth?</p><h3 id="var/blood_content"><aside class="declaration">var </aside>blood_content
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/reagents/Chemistry-Reagents.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;Chemistry-Reagents.dm 17"/></a></h3>
+        <p>Used for vampric-Digestion</p><h3 id="var/can_overdose_touch"><aside class="declaration">var </aside>can_overdose_touch
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/reagents/Chemistry-Reagents.dm#L31">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;Chemistry-Reagents.dm 31"/></a></h3>
+        <p>Can the chemical OD when processing on touch?</p><h3 id="var/filtered_organs"><aside class="declaration">var </aside>filtered_organs
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/reagents/Chemistry-Reagents.dm#L19">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;Chemistry-Reagents.dm 19"/></a></h3>
+        <p>Organs that will slow the processing of this chemical.</p><h3 id="var/mrate_static"><aside class="declaration">var </aside>mrate_static
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/reagents/Chemistry-Reagents.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;Chemistry-Reagents.dm 21"/></a></h3>
+        <p>If the reagent should always process at the same speed, regardless of species, make this TRUE</p><h3 id="var/overdose"><aside class="declaration">var </aside>overdose
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/reagents/Chemistry-Reagents.dm#L27">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;Chemistry-Reagents.dm 27"/></a></h3>
+        <p>Amount at which overdose starts</p><h3 id="var/overdose_mod"><aside class="declaration">var </aside>overdose_mod
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/reagents/Chemistry-Reagents.dm#L29">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;Chemistry-Reagents.dm 29"/></a></h3>
+        <p>Modifier to overdose damage</p><h3 id="var/scannable"><aside class="declaration">var </aside>scannable
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/reagents/Chemistry-Reagents.dm#L33">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;Chemistry-Reagents.dm 33"/></a></h3>
+        <p>Shows up on health analyzers.</p><h3 id="var/taste_mult"><aside class="declaration">var </aside>taste_mult
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/reagents/Chemistry-Reagents.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;Chemistry-Reagents.dm 10"/></a></h3>
+        <p>How this taste compares to others. Higher values means it is more noticable</p><h2 id="proc">Proc Details</h2><h3 id="proc/on_mob_life"><aside class="declaration">proc </aside>on_mob_life<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/M, alien, /<a href="datum.html">datum</a>/reagents/metabolism/location) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/reagents/Chemistry-Reagents.dm#L68">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;Chemistry-Reagents.dm 68"/></a></aside>
+        </h3>
+        <p>Currently, on_mob_life is called on carbons. Any interaction with non-carbon mobs (lube) will need to be done in touch_mob.</p><h3 id="proc/touch_mob"><aside class="declaration">proc </aside>touch_mob<aside>(/<a href="mob.html">mob</a>/M, amount) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/reagents/Chemistry-Reagents.dm#L56">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;Chemistry-Reagents.dm 56"/></a></aside>
+        </h3>
+        <p>This doesn't apply to skin contact - this is for, e.g. extinguishers and sprays. The difference is that reagent is not directly on the mob's skin - it might just be on their clothing.</p><h3 id="proc/touch_obj"><aside class="declaration">proc </aside>touch_obj<aside>(/<a href="obj.html">obj</a>/O, amount) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/reagents/Chemistry-Reagents.dm#L60">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;Chemistry-Reagents.dm 60"/></a></aside>
+        </h3>
+        <p>Acid melting, cleaner cleaning, etc</p><h3 id="proc/touch_turf"><aside class="declaration">proc </aside>touch_turf<aside>(/<a href="turf.html">turf</a>/T, amount) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/reagents/Chemistry-Reagents.dm#L64">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;Chemistry-Reagents.dm 64"/></a></aside>
+        </h3>
+        <p>Cleaner cleaning, lube lubbing, etc, all go here</p></main>
+<footer>
+    vorestation.dme
+    <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/326815dfb7907ff359a42d9b7d259f645c74414c">326815d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.3.0</a></footer>
+</body>
+</html>

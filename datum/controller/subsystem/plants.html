@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;controller&#x2F;subsystem&#x2F;plants - Citadel Station 13 - HRP</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Citadel Station 13 - HRP</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/controller/subsystem/plants.html#var">Var Details</a> - <a href="datum/controller/subsystem/plants.html#proc">Proc Details</a></header>
+<main>
+<h1>Plants <aside>/<a href="datum.html">datum</a>/<a href="datum/controller/subsystem.html">controller/subsystem</a>/<a href="datum/controller/subsystem/plants.html">plants</a></aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/plants.dm#L4">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;plants.dm 4"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/controller/subsystem/plants.html#var/gene_masked_list">gene_masked_list</a></th><td>Stored gene masked list, rather than recreating it when needed.</td></tr>
+            <tr><th><a href="datum/controller/subsystem/plants.html#var/gene_tag_masks">gene_tag_masks</a></th><td>Gene obfuscation for delicious trial and error goodness.</td></tr>
+            <tr><th><a href="datum/controller/subsystem/plants.html#var/plant_gene_datums">plant_gene_datums</a></th><td>Stored datum versions of the gene masked list.</td></tr>
+            <tr><th><a href="datum/controller/subsystem/plants.html#var/plant_icon_cache">plant_icon_cache</a></th><td>Stores images of growth, fruits and seeds.</td></tr>
+            <tr><th><a href="datum/controller/subsystem/plants.html#var/plant_product_sprites">plant_product_sprites</a></th><td>List of all growth sprites plus number of growth stages.</td></tr>
+            <tr><th><a href="datum/controller/subsystem/plants.html#var/plant_sprites">plant_sprites</a></th><td>List of all harvested product sprites.</td></tr>
+            <tr><th><a href="datum/controller/subsystem/plants.html#var/product_descs">product_descs</a></th><td>Stores generated fruit descs.</td></tr>
+            <tr><th><a href="datum/controller/subsystem/plants.html#var/seeds">seeds</a></th><td>All seed data stored here.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/controller/subsystem/plants.html#proc/create_random_seed">create_random_seed</a></th><td>Proc for creating a random seed type.</td></tr>
+            <tr><th><a href="datum/controller/subsystem/plants.html#proc/setup">setup</a></th><td>Predefined/roundstart varieties use a string key to make it
+easier to grab the new variety when mutating. Post-roundstart
+and mutant varieties use their uid converted to a string instead.
+Looks like shit but it's sort of necessary.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/gene_masked_list"><aside class="declaration">var </aside>gene_masked_list
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/plants.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;plants.dm 23"/></a></h3>
+        <p>Stored gene masked list, rather than recreating it when needed.</p><h3 id="var/gene_tag_masks"><aside class="declaration">var </aside>gene_tag_masks
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/plants.dm#L15">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;plants.dm 15"/></a></h3>
+        <p>Gene obfuscation for delicious trial and error goodness.</p><h3 id="var/plant_gene_datums"><aside class="declaration">var </aside>plant_gene_datums
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/plants.dm#L25">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;plants.dm 25"/></a></h3>
+        <p>Stored datum versions of the gene masked list.</p><h3 id="var/plant_icon_cache"><aside class="declaration">var </aside>plant_icon_cache
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/plants.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;plants.dm 17"/></a></h3>
+        <p>Stores images of growth, fruits and seeds.</p><h3 id="var/plant_product_sprites"><aside class="declaration">var </aside>plant_product_sprites
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/plants.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;plants.dm 21"/></a></h3>
+        <p>List of all growth sprites plus number of growth stages.</p><h3 id="var/plant_sprites"><aside class="declaration">var </aside>plant_sprites
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/plants.dm#L19">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;plants.dm 19"/></a></h3>
+        <p>List of all harvested product sprites.</p><h3 id="var/product_descs"><aside class="declaration">var </aside>product_descs
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/plants.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;plants.dm 11"/></a></h3>
+        <p>Stores generated fruit descs.</p><h3 id="var/seeds"><aside class="declaration">var </aside>seeds
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/plants.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;plants.dm 13"/></a></h3>
+        <p>All seed data stored here.</p><h2 id="proc">Proc Details</h2><h3 id="proc/create_random_seed"><aside class="declaration">proc </aside>create_random_seed<aside>(survive_on_station) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/plants.dm#L105">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;plants.dm 105"/></a></aside>
+        </h3>
+        <p>Proc for creating a random seed type.</p><h3 id="proc/setup"><aside class="declaration">proc </aside>setup<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/plants.dm#L45">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;plants.dm 45"/></a></aside>
+        </h3>
+        <p>Predefined/roundstart varieties use a string key to make it
+easier to grab the new variety when mutating. Post-roundstart
+and mutant varieties use their uid converted to a string instead.
+Looks like shit but it's sort of necessary.</p></main>
+<footer>
+    vorestation.dme
+    <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/326815dfb7907ff359a42d9b7d259f645c74414c">326815d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.3.0</a></footer>
+</body>
+</html>

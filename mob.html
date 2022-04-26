@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;mob - Citadel Station 13 - HRP</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Citadel Station 13 - HRP</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="mob.html#var">Var Details</a> - <a href="mob.html#proc">Proc Details</a></header>
+<main>
+<h1>/<a href="mob.html">mob</a><aside> inherits /<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a></aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/_onclick/hud/alert.dm#L452">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_onclick&#x2F;hud&#x2F;alert.dm 452"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="mob.html#var/focus">focus</a></th><td>What receives our keyboard inputs, defaulting to src.</td></tr>
+            <tr><th><a href="mob.html#var/fullscreens">fullscreens</a></th><td>Fullscreen objects</td></tr>
+            <tr><th><a href="mob.html#var/is_shifted">is_shifted</a></th><td>Player pixel shifting, if TRUE, we need to reset on move.</td></tr>
+            <tr><th><a href="mob.html#var/last_turn">last_turn</a></th><td>Last world.time we turned in our spot without moving (see: facing directions)</td></tr>
+            <tr><th><a href="mob.html#var/m_intent">m_intent</a></th><td>How are we intending to move? Walk/run/etc.</td></tr>
+            <tr><th><a href="mob.html#var/move_delay">move_delay</a></th><td>Next world.time we will be able to move.</td></tr>
+            <tr><th><a href="mob.html#var/stat">stat</a></th><td>Whether a mob is alive or dead. TODO: Move this to living - Nodrak</td></tr>
+            <tr><th><a href="mob.html#var/tgui_open_uis">tgui_open_uis</a></th><td>global</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="mob.html#proc/MouseWheelOn">MouseWheelOn</a></th><td>MouseWheelOn</td></tr>
+            <tr><th><a href="mob.html#proc/Process_Spacemove">Process_Spacemove</a></th><td>Process_Spacemove
+Called by /client/Move()
+For moving in space
+Return 1 for movement 0 for none</td></tr>
+            <tr><th><a href="mob.html#proc/SelfMove">SelfMove</a></th><td>end</td></tr>
+            <tr><th><a href="mob.html#proc/allow_examine">allow_examine</a></th><td>Returns whether or not we should be allowed to examine a target</td></tr>
+            <tr><th><a href="mob.html#proc/anti_magic_check">anti_magic_check</a></th><td>Checks for anti magic sources.</td></tr>
+            <tr><th><a href="mob.html#proc/canface">canface</a></th><td>Returns true if a mob can turn to face things</td></tr>
+            <tr><th><a href="mob.html#proc/clear_fullscreen">clear_fullscreen</a></th><td>Wipes a fullscreen of a certain category</td></tr>
+            <tr><th><a href="mob.html#proc/dispose_rendering">dispose_rendering</a></th><td>destroys screen rendering. call on mob del</td></tr>
+            <tr><th><a href="mob.html#proc/eastface">eastface</a></th><td>Hidden verb to turn east</td></tr>
+            <tr><th><a href="mob.html#proc/fully_replace_character_name">fully_replace_character_name</a></th><td>This will update a mob's name, real_name, mind.name, data_core records, pda and id
+Calling this proc without an oldname will only update the mob and skip updating the pda, id and records ~Carn</td></tr>
+            <tr><th><a href="mob.html#proc/get_effective_size">get_effective_size</a></th><td>Get the effective size of a mob.
+Currently this is based only on size_multiplier for micro/macro stuff,
+but in the future we may also incorporate the &quot;mob_size&quot;, so that
+a macro mouse is still only effectively &quot;normal&quot; or a micro dragon is still large etc.</td></tr>
+            <tr><th><a href="mob.html#proc/hide_fullscreens">hide_fullscreens</a></th><td>Removes fullscreens from client but not the mob</td></tr>
+            <tr><th><a href="mob.html#proc/init_rendering">init_rendering</a></th><td>initializes screen rendering. call on mob new</td></tr>
+            <tr><th><a href="mob.html#proc/me_verb_subtle">me_verb_subtle</a></th><td>SUBTLE COMMAND</td></tr>
+            <tr><th><a href="mob.html#proc/movement_delay">movement_delay</a></th><td>until movespeed modifiers are done - silicons</td></tr>
+            <tr><th><a href="mob.html#proc/northface">northface</a></th><td>Hidden verb to turn north</td></tr>
+            <tr><th><a href="mob.html#proc/overlay_fullscreen">overlay_fullscreen</a></th><td>Adds a fullscreen overlay</td></tr>
+            <tr><th><a href="mob.html#proc/reload_fullscreen">reload_fullscreen</a></th><td>Ensures all fullscreens are on client.</td></tr>
+            <tr><th><a href="mob.html#proc/reload_rendering">reload_rendering</a></th><td>loads screen rendering. call on mob login</td></tr>
+            <tr><th><a href="mob.html#proc/rename_self">rename_self</a></th><td>Generalised helper proc for letting mobs rename themselves. Used to be clname() and ainame()</td></tr>
+            <tr><th><a href="mob.html#proc/reset_perspective">reset_perspective</a></th><td>Reset the attached clients perspective (viewpoint)</td></tr>
+            <tr><th><a href="mob.html#proc/return_to_menu">return_to_menu</a></th><td>Alias for respawn</td></tr>
+            <tr><th><a href="mob.html#proc/shared_ui_interaction">shared_ui_interaction</a></th><td>public</td></tr>
+            <tr><th><a href="mob.html#proc/southface">southface</a></th><td>Hidden verb to turn south</td></tr>
+            <tr><th><a href="mob.html#proc/subtler_anti_ghost">subtler_anti_ghost</a></th><td>SHIT COPYPASTE CODE FOR SUBTLER ANTI GHOST</td></tr>
+            <tr><th><a href="mob.html#proc/toggle_move_intent">toggle_move_intent</a></th><td>Toggle the move intent of the mob</td></tr>
+            <tr><th><a href="mob.html#proc/westface">westface</a></th><td>Hidden verb to turn west</td></tr>
+            <tr><th><a href="mob.html#proc/wipe_fullscreens">wipe_fullscreens</a></th><td>Wipes all fullscreens</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/focus"><aside class="declaration">var </aside>focus
+            <aside>&ndash; /<a href="datum.html">datum</a></aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/keybindings/focus.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;keybindings&#x2F;focus.dm 5"/></a></h3>
+        <p>What receives our keyboard inputs, defaulting to src.</p><h3 id="var/fullscreens"><aside class="declaration">var </aside>fullscreens
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob_defines.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_defines.dm 11"/></a></h3>
+        <p>Fullscreen objects</p><h3 id="var/is_shifted"><aside class="declaration">var </aside>is_shifted
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob_defines.dm#L113">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_defines.dm 113"/></a></h3>
+        <p>Player pixel shifting, if TRUE, we need to reset on move.</p><h3 id="var/last_turn"><aside class="declaration">var </aside>last_turn
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob_defines.dm#L25">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_defines.dm 25"/></a></h3>
+        <p>Last world.time we turned in our spot without moving (see: facing directions)</p><h3 id="var/m_intent"><aside class="declaration">var </aside>m_intent
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob_defines.dm#L15">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_defines.dm 15"/></a></h3>
+        <p>How are we intending to move? Walk/run/etc.</p><h3 id="var/move_delay"><aside class="declaration">var </aside>move_delay
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob_defines.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_defines.dm 23"/></a></h3>
+        <p>Next world.time we will be able to move.</p><h3 id="var/stat"><aside class="declaration">var </aside>stat
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob_defines.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_defines.dm 21"/></a></h3>
+        <p>Whether a mob is alive or dead. TODO: Move this to living - Nodrak</p><h3 id="var/tgui_open_uis"><aside class="declaration">var </aside>tgui_open_uis
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/tgui/external.dm#L127">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgui&#x2F;external.dm 127"/></a></h3>
+        <p>global</p>
+<p>Tracks open UIs for a user.</p><h2 id="proc">Proc Details</h2><h3 id="proc/MouseWheelOn"><aside class="declaration">proc </aside>MouseWheelOn<aside>(/<a href="atom.html">atom</a>/A, delta_x, delta_y, params) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/_onclick/click.dm#L400">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_onclick&#x2F;click.dm 400"/></a></aside>
+        </h3>
+        <p>MouseWheelOn</p><h3 id="proc/Process_Spacemove"><aside class="parent"><a title="/atom/movable" href="atom/movable.html#proc/Process_Spacemove">&uarr;</a></aside>Process_Spacemove<aside>(direction) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob_movement.dm#L404">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_movement.dm 404"/></a></aside>
+        </h3>
+        <p>Process_Spacemove
+Called by /client/Move()
+For moving in space
+Return 1 for movement 0 for none</p><h3 id="proc/SelfMove"><aside class="declaration">proc </aside>SelfMove<aside>(/<a href="turf.html">turf</a>/n, direct) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob_movement.dm#L326">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_movement.dm 326"/></a></aside>
+        </h3>
+        <p>end</p><h3 id="proc/allow_examine"><aside class="declaration">proc </aside>allow_examine<aside>(/<a href="atom.html">atom</a>/A) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob.dm#L1290">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob.dm 1290"/></a></aside>
+        </h3>
+        <p>Returns whether or not we should be allowed to examine a target</p><h3 id="proc/anti_magic_check"><aside class="declaration">proc </aside>anti_magic_check<aside>(magic, holy, chargecost, self) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob.dm#L1270">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob.dm 1270"/></a></aside>
+        </h3>
+        <p>Checks for anti magic sources.</p>
+<p>@params</p>
+<ul>
+<li>magic - wizard-type magic</li>
+<li>holy - cult-type magic, stuff chaplains/nullrods/similar should be countering</li>
+<li>chargecost - charges to remove from antimagic if applicable/not a permanent source</li>
+<li>self - check if the antimagic is ourselves</li>
+</ul>
+<p>@return The datum source of the antimagic</p><h3 id="proc/canface"><aside class="declaration">proc </aside>canface<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob_movement.dm#L497">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_movement.dm 497"/></a></aside>
+        </h3>
+        <p>Returns true if a mob can turn to face things</p>
+<p>Conditions:</p>
+<ul>
+<li>client.last_turn &gt; world.time</li>
+<li>not dead or unconcious</li>
+<li>not anchored</li>
+<li>no transform not set</li>
+<li>we are not restrained</li>
+</ul><h3 id="proc/clear_fullscreen"><aside class="declaration">proc </aside>clear_fullscreen<aside>(category, animated) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/_rendering/fullscreen/fullscreen.dm#L29">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_rendering&#x2F;fullscreen&#x2F;fullscreen.dm 29"/></a></aside>
+        </h3>
+        <p>Wipes a fullscreen of a certain category</p>
+<p>Second argument is for animation delay.</p><h3 id="proc/dispose_rendering"><aside class="declaration">proc </aside>dispose_rendering<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/_rendering/mob.dm#L20">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_rendering&#x2F;mob.dm 20"/></a></aside>
+        </h3>
+        <p>destroys screen rendering. call on mob del</p><h3 id="proc/eastface"><aside class="declaration">verb </aside>eastface<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob_movement.dm#L509">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_movement.dm 509"/></a></aside>
+        </h3>
+        <p>Hidden verb to turn east</p><h3 id="proc/fully_replace_character_name"><aside class="declaration">proc </aside>fully_replace_character_name<aside>(oldname, newname) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__HELPERS/unsorted.dm#L288">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 288"/></a></aside>
+        </h3>
+        <p>This will update a mob's name, real_name, mind.name, data_core records, pda and id
+Calling this proc without an oldname will only update the mob and skip updating the pda, id and records ~Carn</p><h3 id="proc/get_effective_size"><aside class="declaration">proc </aside>get_effective_size<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/vore/resizing/resize_vr.dm#L56">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;vore&#x2F;resizing&#x2F;resize_vr.dm 56"/></a></aside>
+        </h3>
+        <p>Get the effective size of a mob.
+Currently this is based only on size_multiplier for micro/macro stuff,
+but in the future we may also incorporate the &quot;mob_size&quot;, so that
+a macro mouse is still only effectively &quot;normal&quot; or a micro dragon is still large etc.</p><h3 id="proc/hide_fullscreens"><aside class="declaration">proc </aside>hide_fullscreens<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/_rendering/fullscreen/fullscreen.dm#L59">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_rendering&#x2F;fullscreen&#x2F;fullscreen.dm 59"/></a></aside>
+        </h3>
+        <p>Removes fullscreens from client but not the mob</p><h3 id="proc/init_rendering"><aside class="declaration">proc </aside>init_rendering<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/_rendering/mob.dm#L4">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_rendering&#x2F;mob.dm 4"/></a></aside>
+        </h3>
+        <p>initializes screen rendering. call on mob new</p><h3 id="proc/me_verb_subtle"><aside class="declaration">verb </aside>me_verb_subtle<aside>(message) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/say_vr.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;say_vr.dm 5"/></a></aside>
+        </h3>
+        <p>SUBTLE COMMAND</p><h3 id="proc/movement_delay"><aside class="declaration">proc </aside>movement_delay<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob_movement.dm#L54">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_movement.dm 54"/></a></aside>
+        </h3>
+        <p>until movespeed modifiers are done - silicons</p><h3 id="proc/northface"><aside class="declaration">verb </aside>northface<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob_movement.dm#L527">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_movement.dm 527"/></a></aside>
+        </h3>
+        <p>Hidden verb to turn north</p><h3 id="proc/overlay_fullscreen"><aside class="declaration">proc </aside>overlay_fullscreen<aside>(category, type, severity) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/_rendering/fullscreen/fullscreen.dm#L9">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_rendering&#x2F;fullscreen&#x2F;fullscreen.dm 9"/></a></aside>
+        </h3>
+        <p>Adds a fullscreen overlay</p>
+<p>@params</p>
+<ul>
+<li>category - string - must exist. will overwrite any other screen in this category. defaults to type.</li>
+<li>type - the typepath of the screen</li>
+<li>severity - severity - different screen objects have differing severities</li>
+</ul><h3 id="proc/reload_fullscreen"><aside class="declaration">proc </aside>reload_fullscreen<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/_rendering/fullscreen/fullscreen.dm#L67">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_rendering&#x2F;fullscreen&#x2F;fullscreen.dm 67"/></a></aside>
+        </h3>
+        <p>Ensures all fullscreens are on client.</p><h3 id="proc/reload_rendering"><aside class="declaration">proc </aside>reload_rendering<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/_rendering/mob.dm#L9">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_rendering&#x2F;mob.dm 9"/></a></aside>
+        </h3>
+        <p>loads screen rendering. call on mob login</p><h3 id="proc/rename_self"><aside class="declaration">proc </aside>rename_self<aside>(role, allow_numbers) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__HELPERS/unsorted.dm#L331">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 331"/></a></aside>
+        </h3>
+        <p>Generalised helper proc for letting mobs rename themselves. Used to be clname() and ainame()</p><h3 id="proc/reset_perspective"><aside class="declaration">proc </aside>reset_perspective<aside>(/<a href="atom.html">atom</a>/A) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob.dm#L111">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob.dm 111"/></a></aside>
+        </h3>
+        <p>Reset the attached clients perspective (viewpoint)</p>
+<p>reset_perspective() set eye to common default : mob on turf, loc otherwise
+reset_perspective(thing) set the eye to the thing (if it's equal to current default reset to mob perspective)</p><h3 id="proc/return_to_menu"><aside class="declaration">verb </aside>return_to_menu<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob.dm#L452">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob.dm 452"/></a></aside>
+        </h3>
+        <p>Alias for respawn</p><h3 id="proc/shared_ui_interaction"><aside class="declaration">proc </aside>shared_ui_interaction<aside>(src_object) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/tgui/states.dm#L62">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgui&#x2F;states.dm 62"/></a></aside>
+        </h3>
+        <p>public</p>
+<p>Standard interaction/sanity checks. Different mob types may have overrides.</p>
+<p>return UI_state The state of the UI.</p><h3 id="proc/southface"><aside class="declaration">verb </aside>southface<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob_movement.dm#L536">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_movement.dm 536"/></a></aside>
+        </h3>
+        <p>Hidden verb to turn south</p><h3 id="proc/subtler_anti_ghost"><aside class="declaration">verb </aside>subtler_anti_ghost<aside>(message) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/say_vr.dm#L67">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;say_vr.dm 67"/></a></aside>
+        </h3>
+        <p>SHIT COPYPASTE CODE FOR SUBTLER ANTI GHOST</p><h3 id="proc/toggle_move_intent"><aside class="declaration">proc </aside>toggle_move_intent<aside>(/<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/living_movement.dm#L27">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_movement.dm 27"/></a></aside>
+        </h3>
+        <p>Toggle the move intent of the mob</p>
+<p>triggers an update the move intent hud as well</p><h3 id="proc/westface"><aside class="declaration">verb </aside>westface<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/mob_movement.dm#L518">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_movement.dm 518"/></a></aside>
+        </h3>
+        <p>Hidden verb to turn west</p><h3 id="proc/wipe_fullscreens"><aside class="declaration">proc </aside>wipe_fullscreens<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/_rendering/fullscreen/fullscreen.dm#L52">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_rendering&#x2F;fullscreen&#x2F;fullscreen.dm 52"/></a></aside>
+        </h3>
+        <p>Wipes all fullscreens</p></main>
+<footer>
+    vorestation.dme
+    <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/326815dfb7907ff359a42d9b7d259f645c74414c">326815d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.3.0</a></footer>
+</body>
+</html>

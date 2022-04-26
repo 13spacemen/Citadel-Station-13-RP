@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;machinery&#x2F;telecomms - Citadel Station 13 - HRP</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Citadel Station 13 - HRP</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/machinery/telecomms.html#var">Var Details</a></header>
+<main>
+<h1>/<a href="obj.html">obj</a>/<a href="obj/machinery.html">machinery</a>/<a href="obj/machinery/telecomms.html">telecomms</a>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/machine_interactions.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;machine_interactions.dm 13"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/machinery/telecomms.html#var/autolinkers">autolinkers</a></th><td>List of text/number values to link with.</td></tr>
+            <tr><th><a href="obj/machinery/telecomms.html#var/delay">delay</a></th><td>How many process() ticks to delay per heat.</td></tr>
+            <tr><th><a href="obj/machinery/telecomms.html#var/hide">hide</a></th><td>Is it a hidden machine?</td></tr>
+            <tr><th><a href="obj/machinery/telecomms.html#var/id">id</a></th><td>Identification string.</td></tr>
+            <tr><th><a href="obj/machinery/telecomms.html#var/integrity">integrity</a></th><td>Basically HP, loses integrity by heat.</td></tr>
+            <tr><th><a href="obj/machinery/telecomms.html#var/links">links</a></th><td>List of machines this machine is linked to.</td></tr>
+            <tr><th><a href="obj/machinery/telecomms.html#var/listening_level">listening_level</a></th><td>0 = auto set in New() - this is the z level that the machine is listening to.</td></tr>
+            <tr><th><a href="obj/machinery/telecomms.html#var/long_range_link">long_range_link</a></th><td>Can you link it across Z levels or on the otherside of the map? (Relay &amp; Hub)</td></tr>
+            <tr><th><a href="obj/machinery/telecomms.html#var/machinetype">machinetype</a></th><td>Just a hacky way of preventing alike machines from pairing.</td></tr>
+            <tr><th><a href="obj/machinery/telecomms.html#var/netspeed">netspeed</a></th><td>How much traffic to lose per tick (50 gigabytes/second * netspeed).</td></tr>
+            <tr><th><a href="obj/machinery/telecomms.html#var/network">network</a></th><td>The network of the machinery.</td></tr>
+            <tr><th><a href="obj/machinery/telecomms.html#var/produces_heat">produces_heat</a></th><td>Whether the machine will produce heat when on.</td></tr>
+            <tr><th><a href="obj/machinery/telecomms.html#var/toggled">toggled</a></th><td>Is it toggled on. //Not sure why we have this when we have var/on.</td></tr>
+            <tr><th><a href="obj/machinery/telecomms.html#var/traffic">traffic</a></th><td>Value increases as traffic increases.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/autolinkers"><aside class="declaration">var </aside>autolinkers
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/telecomunications.dm#L25">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;telecomunications.dm 25"/></a></h3>
+        <p>List of text/number values to link with.</p><h3 id="var/delay"><aside class="declaration">var </aside>delay
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/telecomunications.dm#L42">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;telecomunications.dm 42"/></a></h3>
+        <p>How many process() ticks to delay per heat.</p><h3 id="var/hide"><aside class="declaration">var </aside>hide
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/telecomunications.dm#L46">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;telecomunications.dm 46"/></a></h3>
+        <p>Is it a hidden machine?</p><h3 id="var/id"><aside class="declaration">var </aside>id
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/telecomunications.dm#L27">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;telecomunications.dm 27"/></a></h3>
+        <p>Identification string.</p><h3 id="var/integrity"><aside class="declaration">var </aside>integrity
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/telecomunications.dm#L38">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;telecomunications.dm 38"/></a></h3>
+        <p>Basically HP, loses integrity by heat.</p><h3 id="var/links"><aside class="declaration">var </aside>links
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/telecomunications.dm#L19">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;telecomunications.dm 19"/></a></h3>
+        <p>List of machines this machine is linked to.</p><h3 id="var/listening_level"><aside class="declaration">var </aside>listening_level
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/telecomunications.dm#L48">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;telecomunications.dm 48"/></a></h3>
+        <p>0 = auto set in New() - this is the z level that the machine is listening to.</p><h3 id="var/long_range_link"><aside class="declaration">var </aside>long_range_link
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/telecomunications.dm#L44">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;telecomunications.dm 44"/></a></h3>
+        <p>Can you link it across Z levels or on the otherside of the map? (Relay &amp; Hub)</p><h3 id="var/machinetype"><aside class="declaration">var </aside>machinetype
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/telecomunications.dm#L33">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;telecomunications.dm 33"/></a></h3>
+        <p>Just a hacky way of preventing alike machines from pairing.</p><h3 id="var/netspeed"><aside class="declaration">var </aside>netspeed
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/telecomunications.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;telecomunications.dm 23"/></a></h3>
+        <p>How much traffic to lose per tick (50 gigabytes/second * netspeed).</p><h3 id="var/network"><aside class="declaration">var </aside>network
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/telecomunications.dm#L29">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;telecomunications.dm 29"/></a></h3>
+        <p>The network of the machinery.</p><h3 id="var/produces_heat"><aside class="declaration">var </aside>produces_heat
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/telecomunications.dm#L40">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;telecomunications.dm 40"/></a></h3>
+        <p>Whether the machine will produce heat when on.</p><h3 id="var/toggled"><aside class="declaration">var </aside>toggled
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/telecomunications.dm#L35">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;telecomunications.dm 35"/></a></h3>
+        <p>Is it toggled on. //Not sure why we have this when we have var/on.</p><h3 id="var/traffic"><aside class="declaration">var </aside>traffic
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/telecomms/telecomunications.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;telecomunications.dm 21"/></a></h3>
+        <p>Value increases as traffic increases.</p></main>
+<footer>
+    vorestation.dme
+    <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/326815dfb7907ff359a42d9b7d259f645c74414c">326815d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.3.0</a></footer>
+</body>
+</html>

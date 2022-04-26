@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;species - Citadel Station 13 - HRP</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Citadel Station 13 - HRP</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/species.html#var">Var Details</a></header>
+<main>
+<h1>/<a href="datum.html">datum</a>/<a href="datum/species.html">species</a>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 5"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/species.html#var/active_regen_mult">active_regen_mult</a></th><td>Multiplier for 'Regenerate' power speed, in human_powers.dm</td></tr>
+            <tr><th><a href="datum/species.html#var/ambiguous_genders">ambiguous_genders</a></th><td>If true, people examining a member of this species whom are not also the same species will see them as gender neutral.	Because aliens.</td></tr>
+            <tr><th><a href="datum/species.html#var/appearance_flags">appearance_flags</a></th><td>Appearance/display related features.</td></tr>
+            <tr><th><a href="datum/species.html#var/assisted_langs">assisted_langs</a></th><td>The languages the species can't speak without an assisted organ.
+This list is a guess at things that no one other than the parent species should be able to speak</td></tr>
+            <tr><th><a href="datum/species.html#var/base_color">base_color</a></th><td>Used by changelings. Should also be used for icon previews.</td></tr>
+            <tr><th><a href="datum/species.html#var/base_skin_colours">base_skin_colours</a></th><td>Used for species that only need to change one or two entries in has_limbs.
+The basic skin colours this species uses.</td></tr>
+            <tr><th><a href="datum/species.html#var/blood_color">blood_color</a></th><td>The color of the species blood.</td></tr>
+            <tr><th><a href="datum/species.html#var/blood_level_danger">blood_level_danger</a></th><td>&quot;Danger&quot; blood level; above this, you'll rapidly take up to 50 oxyloss, and it will then steadily accumulate at a lower rate.</td></tr>
+            <tr><th><a href="datum/species.html#var/blood_level_fatal">blood_level_fatal</a></th><td>&quot;Fatal&quot; blood level; below this, you take extremely high oxydamage.</td></tr>
+            <tr><th><a href="datum/species.html#var/blood_level_safe">blood_level_safe</a></th><td>&quot;Safe&quot; blood level; above this, you're OK.</td></tr>
+            <tr><th><a href="datum/species.html#var/blood_level_warning">blood_level_warning</a></th><td>&quot;Warning&quot; blood level; above this, you're a bit woozy and will have low-level oxydamage. (no more than 20, or 15 with inap)</td></tr>
+            <tr><th><a href="datum/species.html#var/blood_name">blood_name</a></th><td>Name for the species' blood.</td></tr>
+            <tr><th><a href="datum/species.html#var/blood_volume">blood_volume</a></th><td>Initial blood volume.</td></tr>
+            <tr><th><a href="datum/species.html#var/bloodloss_rate">bloodloss_rate</a></th><td>Multiplier for how fast a species bleeds out. Higher = Faster</td></tr>
+            <tr><th><a href="datum/species.html#var/blurb">blurb</a></th><td>A brief lore summary for use in the chargen screen.</td></tr>
+            <tr><th><a href="datum/species.html#var/body_temperature">body_temperature</a></th><td>Species will try to stabilize at this temperature. (also affects temperature processing)</td></tr>
+            <tr><th><a href="datum/species.html#var/breath_cold_level_1">breath_cold_level_1</a></th><td>Cold gas damage level 1 below this point.</td></tr>
+            <tr><th><a href="datum/species.html#var/breath_cold_level_2">breath_cold_level_2</a></th><td>Cold gas damage level 2 below this point.</td></tr>
+            <tr><th><a href="datum/species.html#var/breath_cold_level_3">breath_cold_level_3</a></th><td>Cold gas damage level 3 below this point.</td></tr>
+            <tr><th><a href="datum/species.html#var/breath_heat_level_1">breath_heat_level_1</a></th><td>Heat gas damage level 1 below this point.</td></tr>
+            <tr><th><a href="datum/species.html#var/breath_heat_level_2">breath_heat_level_2</a></th><td>Heat gas damage level 2 below this point.</td></tr>
+            <tr><th><a href="datum/species.html#var/breath_heat_level_3">breath_heat_level_3</a></th><td>Heat gas damage level 3 below this point.</td></tr>
+            <tr><th><a href="datum/species.html#var/breath_type">breath_type</a></th><td>Non-oxygen gas breathed, if any.</td></tr>
+            <tr><th><a href="datum/species.html#var/brute_mod">brute_mod</a></th><td>Physical damage multiplier.</td></tr>
+            <tr><th><a href="datum/species.html#var/bump_flag">bump_flag</a></th><td>What are we considered to be when bumped?</td></tr>
+            <tr><th><a href="datum/species.html#var/burn_mod">burn_mod</a></th><td>Burn damage multiplier.</td></tr>
+            <tr><th><a href="datum/species.html#var/catalogue_data">catalogue_data</a></th><td>A list of /datum/category_item/catalogue datums, for the cataloguer, or null.</td></tr>
+            <tr><th><a href="datum/species.html#var/chemOD_mod">chemOD_mod</a></th><td>Damage modifier for overdose</td></tr>
+            <tr><th><a href="datum/species.html#var/cold_discomfort_level">cold_discomfort_level</a></th><td>Aesthetic messages about feeling chilly.</td></tr>
+            <tr><th><a href="datum/species.html#var/cold_level_1">cold_level_1</a></th><td>Cold damage level 1 below this point.</td></tr>
+            <tr><th><a href="datum/species.html#var/cold_level_2">cold_level_2</a></th><td>Cold damage level 2 below this point.</td></tr>
+            <tr><th><a href="datum/species.html#var/cold_level_3">cold_level_3</a></th><td>Cold damage level 3 below this point.</td></tr>
+            <tr><th><a href="datum/species.html#var/darksight">darksight</a></th><td>Native darksight distance.</td></tr>
+            <tr><th><a href="datum/species.html#var/default_language">default_language</a></th><td>Default language is used when 'say' is used without modifiers.</td></tr>
+            <tr><th><a href="datum/species.html#var/deform">deform</a></th><td>Mutated icon set.</td></tr>
+            <tr><th><a href="datum/species.html#var/dispersed_eyes">dispersed_eyes</a></th><td>If set, the species will be affected by flashbangs regardless if they have eyes or not, as they see in large areas.</td></tr>
+            <tr><th><a href="datum/species.html#var/economic_modifier">economic_modifier</a></th><td>How much money this species makes</td></tr>
+            <tr><th><a href="datum/species.html#var/equip_adjust">equip_adjust</a></th><td>Used to shift equipment around based on which species you are.</td></tr>
+            <tr><th><a href="datum/species.html#var/exhale_type">exhale_type</a></th><td>Exhaled gas type.</td></tr>
+            <tr><th><a href="datum/species.html#var/fire_icon_state">fire_icon_state</a></th><td>The icon_state used inside OnFire.dmi for when on fire.</td></tr>
+            <tr><th><a href="datum/species.html#var/flags">flags</a></th><td>Various specific features.</td></tr>
+            <tr><th><a href="datum/species.html#var/flash_burn">flash_burn</a></th><td>how much damage to take from being flashed if light hypersensitive</td></tr>
+            <tr><th><a href="datum/species.html#var/flash_mod">flash_mod</a></th><td>Stun from blindness modifier.</td></tr>
+            <tr><th><a href="datum/species.html#var/flesh_color">flesh_color</a></th><td>The color of the species flesh.</td></tr>
+            <tr><th><a href="datum/species.html#var/gluttonous">gluttonous</a></th><td>Can eat some mobs. 1 for mice, 2 for monkeys, 3 for people.</td></tr>
+            <tr><th><a href="datum/species.html#var/greater_form">greater_form</a></th><td>Greater form, if any, ie. human for monkeys.</td></tr>
+            <tr><th><a href="datum/species.html#var/has_fine_manipulation">has_fine_manipulation</a></th><td>Can use small items.</td></tr>
+            <tr><th><a href="datum/species.html#var/has_floating_eyes">has_floating_eyes</a></th><td>Whether the eyes can be shown above other icons</td></tr>
+            <tr><th><a href="datum/species.html#var/has_glowing_eyes">has_glowing_eyes</a></th><td>Whether the eyes are shown above all lighting</td></tr>
+            <tr><th><a href="datum/species.html#var/has_organ">has_organ</a></th><td>Determines the organs that the species spawns with and which required-organ checks are conducted.</td></tr>
+            <tr><th><a href="datum/species.html#var/hazard_high_pressure">hazard_high_pressure</a></th><td>Dangerously high pressure.</td></tr>
+            <tr><th><a href="datum/species.html#var/hazard_low_pressure">hazard_low_pressure</a></th><td>Dangerously low pressure.</td></tr>
+            <tr><th><a href="datum/species.html#var/health_hud_intensity">health_hud_intensity</a></th><td>This modifies how intensely the health hud is colored.</td></tr>
+            <tr><th><a href="datum/species.html#var/heat_discomfort_level">heat_discomfort_level</a></th><td>Aesthetic messages about feeling warm.</td></tr>
+            <tr><th><a href="datum/species.html#var/heat_level_1">heat_level_1</a></th><td>Heat damage level 1 above this point.</td></tr>
+            <tr><th><a href="datum/species.html#var/heat_level_2">heat_level_2</a></th><td>Heat damage level 2 above this point.</td></tr>
+            <tr><th><a href="datum/species.html#var/heat_level_3">heat_level_3</a></th><td>Heat damage level 3 above this point.</td></tr>
+            <tr><th><a href="datum/species.html#var/holder_type">holder_type</a></th><td>This allows you to pick up crew</td></tr>
+            <tr><th><a href="datum/species.html#var/hunger_factor">hunger_factor</a></th><td>Multiplier for hunger.</td></tr>
+            <tr><th><a href="datum/species.html#var/icobase">icobase</a></th><td>Normal icon set.</td></tr>
+            <tr><th><a href="datum/species.html#var/icon_scale_x">icon_scale_x</a></th><td>Makes the icon wider/thinner.</td></tr>
+            <tr><th><a href="datum/species.html#var/icon_scale_y">icon_scale_y</a></th><td>Makes the icon taller/shorter.</td></tr>
+            <tr><th><a href="datum/species.html#var/icon_template">icon_template</a></th><td>Used for mob icon generation for non-32x32 species.</td></tr>
+            <tr><th><a href="datum/species.html#var/infect_wounds">infect_wounds</a></th><td>Whether the species can infect wounds, only works with claws / bites</td></tr>
+            <tr><th><a href="datum/species.html#var/inherent_spells">inherent_spells</a></th><td>Species-specific spells.</td></tr>
+            <tr><th><a href="datum/species.html#var/inherent_verbs">inherent_verbs</a></th><td>Species-specific verbs.</td></tr>
+            <tr><th><a href="datum/species.html#var/item_slowdown_mod">item_slowdown_mod</a></th><td>How affected by item slowdown the species is.</td></tr>
+            <tr><th><a href="datum/species.html#var/language">language</a></th><td>Default racial language, if any.</td></tr>
+            <tr><th><a href="datum/species.html#var/light_dam">light_dam</a></th><td>If set, mob will be damaged in light over this value and heal in light below its negative.</td></tr>
+            <tr><th><a href="datum/species.html#var/max_age">max_age</a></th><td>The maximum age a species is allowed to be played as. This is generally determined by lifespan.</td></tr>
+            <tr><th><a href="datum/species.html#var/max_nutrition">max_nutrition</a></th><td>max nutrition - i hate myself for haphazardly throwing this in but sue me</td></tr>
+            <tr><th><a href="datum/species.html#var/min_age">min_age</a></th><td>The minimum age a species is allowed to be played as. For our purposes, this is global.</td></tr>
+            <tr><th><a href="datum/species.html#var/minimum_breath_pressure">minimum_breath_pressure</a></th><td>Minimum required pressure for breath, in kPa</td></tr>
+            <tr><th><a href="datum/species.html#var/move_trail">move_trail</a></th><td>What marks are left when walking</td></tr>
+            <tr><th><a href="datum/species.html#var/name">name</a></th><td>Species name.</td></tr>
+            <tr><th><a href="datum/species.html#var/name_language">name_language</a></th><td>The language to use when determining names for this species, or null to use the first name/last name generator.</td></tr>
+            <tr><th><a href="datum/species.html#var/name_plural">name_plural</a></th><td>Pluralized name (since &quot;[name]s&quot; is not always valid)</td></tr>
+            <tr><th><a href="datum/species.html#var/num_alternate_languages">num_alternate_languages</a></th><td>How many secondary languages are available to select at character creation.</td></tr>
+            <tr><th><a href="datum/species.html#var/oxy_mod">oxy_mod</a></th><td>Oxyloss modifier</td></tr>
+            <tr><th><a href="datum/species.html#var/passive_temp_gain">passive_temp_gain</a></th><td>Species will gain this much temperature every second</td></tr>
+            <tr><th><a href="datum/species.html#var/poison_type">poison_type</a></th><td>Poisonous air.</td></tr>
+            <tr><th><a href="datum/species.html#var/primitive_form">primitive_form</a></th><td>Lesser form, if any (ie. monkey for humans)</td></tr>
+            <tr><th><a href="datum/species.html#var/prone_icon">prone_icon</a></th><td>If set, draws this from icobase when mob is prone.</td></tr>
+            <tr><th><a href="datum/species.html#var/push_flags">push_flags</a></th><td>What can we push?</td></tr>
+            <tr><th><a href="datum/species.html#var/race_key">race_key</a></th><td>Used for mob icon cache string.</td></tr>
+            <tr><th><a href="datum/species.html#var/radiation_mod">radiation_mod</a></th><td>Radiation modifier</td></tr>
+            <tr><th><a href="datum/species.html#var/rarity_value">rarity_value</a></th><td>Relative rarity/collector value for this species.</td></tr>
+            <tr><th><a href="datum/species.html#var/reagent_tag">reagent_tag</a></th><td>Used for metabolizing reagents.</td></tr>
+            <tr><th><a href="datum/species.html#var/secondary_langs">secondary_langs</a></th><td>The names of secondary languages that are available to this species.</td></tr>
+            <tr><th><a href="datum/species.html#var/sexybits_location">sexybits_location</a></th><td>Organ tag where they are located if they can be kicked for increased pain.</td></tr>
+            <tr><th><a href="datum/species.html#var/short_sighted">short_sighted</a></th><td>Permanent weldervision.</td></tr>
+            <tr><th><a href="datum/species.html#var/siemens_coefficient">siemens_coefficient</a></th><td>The lower, the thicker the skin and better the insulation.</td></tr>
+            <tr><th><a href="datum/species.html#var/slowdown">slowdown</a></th><td>Passive movement speed malus (or boost, if negative)</td></tr>
+            <tr><th><a href="datum/species.html#var/snow_movement">snow_movement</a></th><td>How much faster or slower the species is on snow</td></tr>
+            <tr><th><a href="datum/species.html#var/sound_mod">sound_mod</a></th><td>Stun from sounds, I.E. flashbangs.</td></tr>
+            <tr><th><a href="datum/species.html#var/spawn_flags">spawn_flags</a></th><td>Flags that specify who can spawn as this species</td></tr>
+            <tr><th><a href="datum/species.html#var/species_language">species_language</a></th><td>Used on the Character Setup screen</td></tr>
+            <tr><th><a href="datum/species.html#var/speech_bubble_appearance">speech_bubble_appearance</a></th><td>Part of icon_state to use for speech bubbles when talking.	See talk.dmi for available icons.</td></tr>
+            <tr><th><a href="datum/species.html#var/speech_chance">speech_chance</a></th><td>The likelihood of a speech sound playing.</td></tr>
+            <tr><th><a href="datum/species.html#var/speech_sounds">speech_sounds</a></th><td>A list of sounds to potentially play when speaking.</td></tr>
+            <tr><th><a href="datum/species.html#var/suit_storage_icon">suit_storage_icon</a></th><td>Icons used for worn items in suit storage slot.</td></tr>
+            <tr><th><a href="datum/species.html#var/swap_flags">swap_flags</a></th><td>What can we swap place with?</td></tr>
+            <tr><th><a href="datum/species.html#var/tail">tail</a></th><td>Name of tail state in species effects icon file.</td></tr>
+            <tr><th><a href="datum/species.html#var/tail_animation">tail_animation</a></th><td>If set, the icon to obtain tail animation states from.</td></tr>
+            <tr><th><a href="datum/species.html#var/taste_sensitivity">taste_sensitivity</a></th><td>How sensitive the species is to minute tastes.</td></tr>
+            <tr><th><a href="datum/species.html#var/thirst_factor">thirst_factor</a></th><td>Multiplier for thirst.</td></tr>
+            <tr><th><a href="datum/species.html#var/total_health">total_health</a></th><td>Point at which the mob will enter crit.</td></tr>
+            <tr><th><a href="datum/species.html#var/toxins_mod">toxins_mod</a></th><td>Toxloss modifier</td></tr>
+            <tr><th><a href="datum/species.html#var/unarmed_attacks">unarmed_attacks</a></th><td>For empty hand harm-intent attack</td></tr>
+            <tr><th><a href="datum/species.html#var/unarmed_types">unarmed_types</a></th><td>Possible unarmed attacks that the mob will use in combat,</td></tr>
+            <tr><th><a href="datum/species.html#var/vision_flags">vision_flags</a></th><td>Same flags as glasses.</td></tr>
+            <tr><th><a href="datum/species.html#var/vision_organ">vision_organ</a></th><td>If set, this organ is required for vision. Defaults to &quot;eyes&quot; if the species has them.</td></tr>
+            <tr><th><a href="datum/species.html#var/warning_high_pressure">warning_high_pressure</a></th><td>High pressure warning.</td></tr>
+            <tr><th><a href="datum/species.html#var/warning_low_pressure">warning_low_pressure</a></th><td>Low pressure warning.</td></tr>
+            <tr><th><a href="datum/species.html#var/water_movement">water_movement</a></th><td>How much faster or slower the species is in water</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/active_regen_mult"><aside class="declaration">var </aside>active_regen_mult
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L83">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 83"/></a></h3>
+        <p>Multiplier for 'Regenerate' power speed, in human_powers.dm</p><h3 id="var/ambiguous_genders"><aside class="declaration">var </aside>ambiguous_genders
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L346">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 346"/></a></h3>
+        <p>If true, people examining a member of this species whom are not also the same species will see them as gender neutral.	Because aliens.</p><h3 id="var/appearance_flags"><aside class="declaration">var </aside>appearance_flags
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L271">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 271"/></a></h3>
+        <p>Appearance/display related features.</p><h3 id="var/assisted_langs"><aside class="declaration">var </aside>assisted_langs
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L112">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 112"/></a></h3>
+        <p>The languages the species can't speak without an assisted organ.
+This list is a guess at things that no one other than the parent species should be able to speak</p><h3 id="var/base_color"><aside class="declaration">var </aside>base_color
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L42">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 42"/></a></h3>
+        <p>Used by changelings. Should also be used for icon previews.</p><h3 id="var/base_skin_colours"><aside class="declaration">var </aside>base_skin_colours
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L343">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 343"/></a></h3>
+        <p>Used for species that only need to change one or two entries in has_limbs.
+The basic skin colours this species uses.</p><h3 id="var/blood_color"><aside class="declaration">var </aside>blood_color
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L38">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 38"/></a></h3>
+        <p>The color of the species blood.</p><h3 id="var/blood_level_danger"><aside class="declaration">var </aside>blood_level_danger
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L75">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 75"/></a></h3>
+        <p>&quot;Danger&quot; blood level; above this, you'll rapidly take up to 50 oxyloss, and it will then steadily accumulate at a lower rate.</p><h3 id="var/blood_level_fatal"><aside class="declaration">var </aside>blood_level_fatal
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L77">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 77"/></a></h3>
+        <p>&quot;Fatal&quot; blood level; below this, you take extremely high oxydamage.</p><h3 id="var/blood_level_safe"><aside class="declaration">var </aside>blood_level_safe
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L71">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 71"/></a></h3>
+        <p>&quot;Safe&quot; blood level; above this, you're OK.</p><h3 id="var/blood_level_warning"><aside class="declaration">var </aside>blood_level_warning
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L73">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 73"/></a></h3>
+        <p>&quot;Warning&quot; blood level; above this, you're a bit woozy and will have low-level oxydamage. (no more than 20, or 15 with inap)</p><h3 id="var/blood_name"><aside class="declaration">var </aside>blood_name
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L65">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 65"/></a></h3>
+        <p>Name for the species' blood.</p><h3 id="var/blood_volume"><aside class="declaration">var </aside>blood_volume
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L67">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 67"/></a></h3>
+        <p>Initial blood volume.</p><h3 id="var/bloodloss_rate"><aside class="declaration">var </aside>bloodloss_rate
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L69">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 69"/></a></h3>
+        <p>Multiplier for how fast a species bleeds out. Higher = Faster</p><h3 id="var/blurb"><aside class="declaration">var </aside>blurb
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 13"/></a></h3>
+        <p>A brief lore summary for use in the chargen screen.</p><h3 id="var/body_temperature"><aside class="declaration">var </aside>body_temperature
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L178">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 178"/></a></h3>
+        <p>Species will try to stabilize at this temperature. (also affects temperature processing)</p><h3 id="var/breath_cold_level_1"><aside class="declaration">var </aside>breath_cold_level_1
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L189">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 189"/></a></h3>
+        <p>Cold gas damage level 1 below this point.</p><h3 id="var/breath_cold_level_2"><aside class="declaration">var </aside>breath_cold_level_2
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L191">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 191"/></a></h3>
+        <p>Cold gas damage level 2 below this point.</p><h3 id="var/breath_cold_level_3"><aside class="declaration">var </aside>breath_cold_level_3
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L193">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 193"/></a></h3>
+        <p>Cold gas damage level 3 below this point.</p><h3 id="var/breath_heat_level_1"><aside class="declaration">var </aside>breath_heat_level_1
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L212">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 212"/></a></h3>
+        <p>Heat gas damage level 1 below this point.</p><h3 id="var/breath_heat_level_2"><aside class="declaration">var </aside>breath_heat_level_2
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L214">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 214"/></a></h3>
+        <p>Heat gas damage level 2 below this point.</p><h3 id="var/breath_heat_level_3"><aside class="declaration">var </aside>breath_heat_level_3
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L216">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 216"/></a></h3>
+        <p>Heat gas damage level 3 below this point.</p><h3 id="var/breath_type"><aside class="declaration">var </aside>breath_type
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L171">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 171"/></a></h3>
+        <p>Non-oxygen gas breathed, if any.</p><h3 id="var/brute_mod"><aside class="declaration">var </aside>brute_mod
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L134">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 134"/></a></h3>
+        <p>Physical damage multiplier.</p><h3 id="var/bump_flag"><aside class="declaration">var </aside>bump_flag
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L353">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 353"/></a></h3>
+        <p>What are we considered to be when bumped?</p><h3 id="var/burn_mod"><aside class="declaration">var </aside>burn_mod
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L136">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 136"/></a></h3>
+        <p>Burn damage multiplier.</p><h3 id="var/catalogue_data"><aside class="declaration">var </aside>catalogue_data
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L15">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 15"/></a></h3>
+        <p>A list of /datum/category_item/catalogue datums, for the cataloguer, or null.</p><h3 id="var/chemOD_mod"><aside class="declaration">var </aside>chemOD_mod
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L150">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 150"/></a></h3>
+        <p>Damage modifier for overdose</p><h3 id="var/cold_discomfort_level"><aside class="declaration">var </aside>cold_discomfort_level
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L196">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 196"/></a></h3>
+        <p>Aesthetic messages about feeling chilly.</p><h3 id="var/cold_level_1"><aside class="declaration">var </aside>cold_level_1
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L182">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 182"/></a></h3>
+        <p>Cold damage level 1 below this point.</p><h3 id="var/cold_level_2"><aside class="declaration">var </aside>cold_level_2
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L184">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 184"/></a></h3>
+        <p>Cold damage level 2 below this point.</p><h3 id="var/cold_level_3"><aside class="declaration">var </aside>cold_level_3
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L186">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 186"/></a></h3>
+        <p>Cold damage level 3 below this point.</p><h3 id="var/darksight"><aside class="declaration">var </aside>darksight
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L265">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 265"/></a></h3>
+        <p>Native darksight distance.</p><h3 id="var/default_language"><aside class="declaration">var </aside>default_language
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L94">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 94"/></a></h3>
+        <p>Default language is used when 'say' is used without modifiers.</p><h3 id="var/deform"><aside class="declaration">var </aside>deform
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 21"/></a></h3>
+        <p>Mutated icon set.</p><h3 id="var/dispersed_eyes"><aside class="declaration">var </aside>dispersed_eyes
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L323">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 323"/></a></h3>
+        <p>If set, the species will be affected by flashbangs regardless if they have eyes or not, as they see in large areas.</p><h3 id="var/economic_modifier"><aside class="declaration">var </aside>economic_modifier
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L305">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 305"/></a></h3>
+        <p>How much money this species makes</p><h3 id="var/equip_adjust"><aside class="declaration">var </aside>equip_adjust
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L244">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 244"/></a></h3>
+        <p>Used to shift equipment around based on which species you are.</p><h3 id="var/exhale_type"><aside class="declaration">var </aside>exhale_type
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L175">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 175"/></a></h3>
+        <p>Exhaled gas type.</p><h3 id="var/fire_icon_state"><aside class="declaration">var </aside>fire_icon_state
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L26">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 26"/></a></h3>
+        <p>The icon_state used inside OnFire.dmi for when on fire.</p><h3 id="var/flags"><aside class="declaration">var </aside>flags
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L269">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 269"/></a></h3>
+        <p>Various specific features.</p><h3 id="var/flash_burn"><aside class="declaration">var </aside>flash_burn
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L146">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 146"/></a></h3>
+        <p>how much damage to take from being flashed if light hypersensitive</p><h3 id="var/flash_mod"><aside class="declaration">var </aside>flash_mod
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L144">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 144"/></a></h3>
+        <p>Stun from blindness modifier.</p><h3 id="var/flesh_color"><aside class="declaration">var </aside>flesh_color
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L40">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 40"/></a></h3>
+        <p>The color of the species flesh.</p><h3 id="var/gluttonous"><aside class="declaration">var </aside>gluttonous
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L300">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 300"/></a></h3>
+        <p>Can eat some mobs. 1 for mice, 2 for monkeys, 3 for people.</p><h3 id="var/greater_form"><aside class="declaration">var </aside>greater_form
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L296">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 296"/></a></h3>
+        <p>Greater form, if any, ie. human for monkeys.</p><h3 id="var/has_fine_manipulation"><aside class="declaration">var </aside>has_fine_manipulation
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L261">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 261"/></a></h3>
+        <p>Can use small items.</p><h3 id="var/has_floating_eyes"><aside class="declaration">var </aside>has_floating_eyes
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L281">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 281"/></a></h3>
+        <p>Whether the eyes can be shown above other icons</p><h3 id="var/has_glowing_eyes"><aside class="declaration">var </aside>has_glowing_eyes
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L283">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 283"/></a></h3>
+        <p>Whether the eyes are shown above all lighting</p><h3 id="var/has_organ"><aside class="declaration">var </aside>has_organ
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L308">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 308"/></a></h3>
+        <p>Determines the organs that the species spawns with and which required-organ checks are conducted.</p><h3 id="var/hazard_high_pressure"><aside class="declaration">var </aside>hazard_high_pressure
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L230">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 230"/></a></h3>
+        <p>Dangerously high pressure.</p><h3 id="var/hazard_low_pressure"><aside class="declaration">var </aside>hazard_low_pressure
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L236">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 236"/></a></h3>
+        <p>Dangerously low pressure.</p><h3 id="var/health_hud_intensity"><aside class="declaration">var </aside>health_hud_intensity
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L253">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 253"/></a></h3>
+        <p>This modifies how intensely the health hud is colored.</p><h3 id="var/heat_discomfort_level"><aside class="declaration">var </aside>heat_discomfort_level
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L219">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 219"/></a></h3>
+        <p>Aesthetic messages about feeling warm.</p><h3 id="var/heat_level_1"><aside class="declaration">var </aside>heat_level_1
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L205">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 205"/></a></h3>
+        <p>Heat damage level 1 above this point.</p><h3 id="var/heat_level_2"><aside class="declaration">var </aside>heat_level_2
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L207">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 207"/></a></h3>
+        <p>Heat damage level 2 above this point.</p><h3 id="var/heat_level_3"><aside class="declaration">var </aside>heat_level_3
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L209">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 209"/></a></h3>
+        <p>Heat damage level 3 above this point.</p><h3 id="var/holder_type"><aside class="declaration">var </aside>holder_type
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L298">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 298"/></a></h3>
+        <p>This allows you to pick up crew</p><h3 id="var/hunger_factor"><aside class="declaration">var </aside>hunger_factor
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L79">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 79"/></a></h3>
+        <p>Multiplier for hunger.</p><h3 id="var/icobase"><aside class="declaration">var </aside>icobase
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L19">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 19"/></a></h3>
+        <p>Normal icon set.</p><h3 id="var/icon_scale_x"><aside class="declaration">var </aside>icon_scale_x
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L51">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 51"/></a></h3>
+        <p>Makes the icon wider/thinner.</p><h3 id="var/icon_scale_y"><aside class="declaration">var </aside>icon_scale_y
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L53">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 53"/></a></h3>
+        <p>Makes the icon taller/shorter.</p><h3 id="var/icon_template"><aside class="declaration">var </aside>icon_template
+            <aside>&ndash; /icon</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L58">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 58"/></a></h3>
+        <p>Used for mob icon generation for non-32x32 species.</p><h3 id="var/infect_wounds"><aside class="declaration">var </aside>infect_wounds
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L289">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 289"/></a></h3>
+        <p>Whether the species can infect wounds, only works with claws / bites</p><h3 id="var/inherent_spells"><aside class="declaration">var </aside>inherent_spells
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L259">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 259"/></a></h3>
+        <p>Species-specific spells.</p><h3 id="var/inherent_verbs"><aside class="declaration">var </aside>inherent_verbs
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L257">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 257"/></a></h3>
+        <p>Species-specific verbs.</p><h3 id="var/item_slowdown_mod"><aside class="declaration">var </aside>item_slowdown_mod
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L292">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 292"/></a></h3>
+        <p>How affected by item slowdown the species is.</p><h3 id="var/language"><aside class="declaration">var </aside>language
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L96">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 96"/></a></h3>
+        <p>Default racial language, if any.</p><h3 id="var/light_dam"><aside class="declaration">var </aside>light_dam
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L239">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 239"/></a></h3>
+        <p>If set, mob will be damaged in light over this value and heal in light below its negative.</p><h3 id="var/max_age"><aside class="declaration">var </aside>max_age
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L90">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 90"/></a></h3>
+        <p>The maximum age a species is allowed to be played as. This is generally determined by lifespan.</p><h3 id="var/max_nutrition"><aside class="declaration">var </aside>max_nutrition
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L385">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 385"/></a></h3>
+        <p>max nutrition - i hate myself for haphazardly throwing this in but sue me</p><h3 id="var/min_age"><aside class="declaration">var </aside>min_age
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L88">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 88"/></a></h3>
+        <p>The minimum age a species is allowed to be played as. For our purposes, this is global.</p><h3 id="var/minimum_breath_pressure"><aside class="declaration">var </aside>minimum_breath_pressure
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L241">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 241"/></a></h3>
+        <p>Minimum required pressure for breath, in kPa</p><h3 id="var/move_trail"><aside class="declaration">var </aside>move_trail
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/effect/decal/cleanable/blood/tracks.html">effect/decal/cleanable/blood/tracks</a></aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L278">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 278"/></a></h3>
+        <p>What marks are left when walking</p><h3 id="var/name"><aside class="declaration">var </aside>name
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L9">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 9"/></a></h3>
+        <p>Species name.</p><h3 id="var/name_language"><aside class="declaration">var </aside>name_language
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L108">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 108"/></a></h3>
+        <p>The language to use when determining names for this species, or null to use the first name/last name generator.</p><h3 id="var/name_plural"><aside class="declaration">var </aside>name_plural
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 11"/></a></h3>
+        <p>Pluralized name (since &quot;[name]s&quot; is not always valid)</p><h3 id="var/num_alternate_languages"><aside class="declaration">var </aside>num_alternate_languages
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L106">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 106"/></a></h3>
+        <p>How many secondary languages are available to select at character creation.</p><h3 id="var/oxy_mod"><aside class="declaration">var </aside>oxy_mod
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L138">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 138"/></a></h3>
+        <p>Oxyloss modifier</p><h3 id="var/passive_temp_gain"><aside class="declaration">var </aside>passive_temp_gain
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L228">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 228"/></a></h3>
+        <p>Species will gain this much temperature every second</p><h3 id="var/poison_type"><aside class="declaration">var </aside>poison_type
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L173">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 173"/></a></h3>
+        <p>Poisonous air.</p><h3 id="var/primitive_form"><aside class="declaration">var </aside>primitive_form
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L294">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 294"/></a></h3>
+        <p>Lesser form, if any (ie. monkey for humans)</p><h3 id="var/prone_icon"><aside class="declaration">var </aside>prone_icon
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L36">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 36"/></a></h3>
+        <p>If set, draws this from icobase when mob is prone.</p><h3 id="var/push_flags"><aside class="declaration">var </aside>push_flags
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L355">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 355"/></a></h3>
+        <p>What can we push?</p><h3 id="var/race_key"><aside class="declaration">var </aside>race_key
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L56">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 56"/></a></h3>
+        <p>Used for mob icon cache string.</p><h3 id="var/radiation_mod"><aside class="declaration">var </aside>radiation_mod
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L142">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 142"/></a></h3>
+        <p>Radiation modifier</p><h3 id="var/rarity_value"><aside class="declaration">var </aside>rarity_value
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L303">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 303"/></a></h3>
+        <p>Relative rarity/collector value for this species.</p><h3 id="var/reagent_tag"><aside class="declaration">var </aside>reagent_tag
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L169">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 169"/></a></h3>
+        <p>Used for metabolizing reagents.</p><h3 id="var/secondary_langs"><aside class="declaration">var </aside>secondary_langs
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L100">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 100"/></a></h3>
+        <p>The names of secondary languages that are available to this species.</p><h3 id="var/sexybits_location"><aside class="declaration">var </aside>sexybits_location
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L349">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 349"/></a></h3>
+        <p>Organ tag where they are located if they can be kicked for increased pain.</p><h3 id="var/short_sighted"><aside class="declaration">var </aside>short_sighted
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L63">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 63"/></a></h3>
+        <p>Permanent weldervision.</p><h3 id="var/siemens_coefficient"><aside class="declaration">var </aside>siemens_coefficient
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L263">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 263"/></a></h3>
+        <p>The lower, the thicker the skin and better the insulation.</p><h3 id="var/slowdown"><aside class="declaration">var </aside>slowdown
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L276">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 276"/></a></h3>
+        <p>Passive movement speed malus (or boost, if negative)</p><h3 id="var/snow_movement"><aside class="declaration">var </aside>snow_movement
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L287">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 287"/></a></h3>
+        <p>How much faster or slower the species is on snow</p><h3 id="var/sound_mod"><aside class="declaration">var </aside>sound_mod
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L148">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 148"/></a></h3>
+        <p>Stun from sounds, I.E. flashbangs.</p><h3 id="var/spawn_flags"><aside class="declaration">var </aside>spawn_flags
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L273">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 273"/></a></h3>
+        <p>Flags that specify who can spawn as this species</p><h3 id="var/species_language"><aside class="declaration">var </aside>species_language
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L98">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 98"/></a></h3>
+        <p>Used on the Character Setup screen</p><h3 id="var/speech_bubble_appearance"><aside class="declaration">var </aside>speech_bubble_appearance
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L24">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 24"/></a></h3>
+        <p>Part of icon_state to use for speech bubbles when talking.	See talk.dmi for available icons.</p><h3 id="var/speech_chance"><aside class="declaration">var </aside>speech_chance
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L104">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 104"/></a></h3>
+        <p>The likelihood of a speech sound playing.</p><h3 id="var/speech_sounds"><aside class="declaration">var </aside>speech_sounds
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L102">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 102"/></a></h3>
+        <p>A list of sounds to potentially play when speaking.</p><h3 id="var/suit_storage_icon"><aside class="declaration">var </aside>suit_storage_icon
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L28">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 28"/></a></h3>
+        <p>Icons used for worn items in suit storage slot.</p><h3 id="var/swap_flags"><aside class="declaration">var </aside>swap_flags
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L357">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 357"/></a></h3>
+        <p>What can we swap place with?</p><h3 id="var/tail"><aside class="declaration">var </aside>tail
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L45">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 45"/></a></h3>
+        <p>Name of tail state in species effects icon file.</p><h3 id="var/tail_animation"><aside class="declaration">var </aside>tail_animation
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L47">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 47"/></a></h3>
+        <p>If set, the icon to obtain tail animation states from.</p><h3 id="var/taste_sensitivity"><aside class="declaration">var </aside>taste_sensitivity
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L85">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 85"/></a></h3>
+        <p>How sensitive the species is to minute tastes.</p><h3 id="var/thirst_factor"><aside class="declaration">var </aside>thirst_factor
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L81">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 81"/></a></h3>
+        <p>Multiplier for thirst.</p><h3 id="var/total_health"><aside class="declaration">var </aside>total_health
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L125">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 125"/></a></h3>
+        <p>Point at which the mob will enter crit.</p><h3 id="var/toxins_mod"><aside class="declaration">var </aside>toxins_mod
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L140">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 140"/></a></h3>
+        <p>Toxloss modifier</p><h3 id="var/unarmed_attacks"><aside class="declaration">var </aside>unarmed_attacks
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L132">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 132"/></a></h3>
+        <p>For empty hand harm-intent attack</p><h3 id="var/unarmed_types"><aside class="declaration">var </aside>unarmed_types
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L127">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 127"/></a></h3>
+        <p>Possible unarmed attacks that the mob will use in combat,</p><h3 id="var/vision_flags"><aside class="declaration">var </aside>vision_flags
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L152">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 152"/></a></h3>
+        <p>Same flags as glasses.</p><h3 id="var/vision_organ"><aside class="declaration">var </aside>vision_organ
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L321">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 321"/></a></h3>
+        <p>If set, this organ is required for vision. Defaults to &quot;eyes&quot; if the species has them.</p><h3 id="var/warning_high_pressure"><aside class="declaration">var </aside>warning_high_pressure
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L232">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 232"/></a></h3>
+        <p>High pressure warning.</p><h3 id="var/warning_low_pressure"><aside class="declaration">var </aside>warning_low_pressure
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L234">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 234"/></a></h3>
+        <p>Low pressure warning.</p><h3 id="var/water_movement"><aside class="declaration">var </aside>water_movement
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/mob/living/carbon/human/species/species.dm#L285">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;species&#x2F;species.dm 285"/></a></h3>
+        <p>How much faster or slower the species is in water</p></main>
+<footer>
+    vorestation.dme
+    <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/326815dfb7907ff359a42d9b7d259f645c74414c">326815d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.3.0</a></footer>
+</body>
+</html>

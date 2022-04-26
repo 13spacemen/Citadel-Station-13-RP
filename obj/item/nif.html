@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;item&#x2F;nif - Citadel Station 13 - HRP</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Citadel Station 13 - HRP</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/item/nif.html#var">Var Details</a> - <a href="obj/item/nif.html#proc">Proc Details</a></header>
+<main>
+<h1>nanite implant framework <aside>/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/nif.html">nif</a></aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L24">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 24"/></a></h1>
+
+<p>***********************************************************************</p>
+<ul>
+<li>This module controls everything to do with the NIF's tgui interface. *
+***********************************************************************</li>
+</ul>
+<p>Etc variables on the NIF to keep this self contained</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/item/nif.html#var/bioadap">bioadap</a></th><td>If it'll work in fancy species</td></tr>
+            <tr><th><a href="obj/item/nif.html#var/comm">comm</a></th><td>The commlink requires this</td></tr>
+            <tr><th><a href="obj/item/nif.html#var/durability">durability</a></th><td>Durability remaining</td></tr>
+            <tr><th><a href="obj/item/nif.html#var/examine_msg">examine_msg</a></th><td>Message shown on examine.</td></tr>
+            <tr><th><a href="obj/item/nif.html#var/human">human</a></th><td>Our owner!</td></tr>
+            <tr><th><a href="obj/item/nif.html#var/id">id</a></th><td>For savefiles</td></tr>
+            <tr><th><a href="obj/item/nif.html#var/install_done">install_done</a></th><td>Time when install will finish</td></tr>
+            <tr><th><a href="obj/item/nif.html#var/nifsofts">nifsofts</a></th><td>All our nifsofts</td></tr>
+            <tr><th><a href="obj/item/nif.html#var/nifsofts_life">nifsofts_life</a></th><td>Ones that want to be talked to on life()</td></tr>
+            <tr><th><a href="obj/item/nif.html#var/open">open</a></th><td>If it's open for maintenance (1-3)</td></tr>
+            <tr><th><a href="obj/item/nif.html#var/owner">owner</a></th><td>Owner character name</td></tr>
+            <tr><th><a href="obj/item/nif.html#var/power_usage">power_usage</a></th><td>Nifsoft adds to this</td></tr>
+            <tr><th><a href="obj/item/nif.html#var/should_be_in">should_be_in</a></th><td>Organ we're supposed to be held in</td></tr>
+            <tr><th><a href="obj/item/nif.html#var/stat">stat</a></th><td>Status of the NIF</td></tr>
+            <tr><th><a href="obj/item/nif.html#var/vision_flags">vision_flags</a></th><td>Flags implants set for faster lookups</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/item/nif.html#proc/ui_act">ui_act</a></th><td>tgui_act handles all user input in the UI.</td></tr>
+            <tr><th><a href="obj/item/nif.html#proc/ui_data">ui_data</a></th><td>tgui_data gives the UI any relevant data it needs.
+In our case, that's basically everything from our statpanel.</td></tr>
+            <tr><th><a href="obj/item/nif.html#proc/ui_interact">ui_interact</a></th><td>Standard TGUI stub to open the NIF.js template.</td></tr>
+            <tr><th><a href="obj/item/nif.html#proc/ui_state">ui_state</a></th><td>The NIF State ensures that only our authorized implanted user can touch us.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/bioadap"><aside class="declaration">var </aside>bioadap
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L41">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 41"/></a></h3>
+        <p>If it'll work in fancy species</p><h3 id="var/comm"><aside class="declaration">var </aside>comm
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/communicator.html">communicator</a>/commlink</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L70">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 70"/></a></h3>
+        <p>The commlink requires this</p><h3 id="var/durability"><aside class="declaration">var </aside>durability
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L39">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 39"/></a></h3>
+        <p>Durability remaining</p><h3 id="var/examine_msg"><aside class="declaration">var </aside>examine_msg
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L54">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 54"/></a></h3>
+        <p>Message shown on examine.</p><h3 id="var/human"><aside class="declaration">var </aside>human
+            <aside>&ndash; /tmp/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a></aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L46">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 46"/></a></h3>
+        <p>Our owner!</p><h3 id="var/id"><aside class="declaration">var </aside>id
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L36">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 36"/></a></h3>
+        <p>For savefiles</p><h3 id="var/install_done"><aside class="declaration">var </aside>install_done
+            <aside>&ndash; /tmp</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L63">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 63"/></a></h3>
+        <p>Time when install will finish</p><h3 id="var/nifsofts"><aside class="declaration">var </aside>nifsofts
+            <aside>&ndash; /tmp/list/list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L48">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 48"/></a></h3>
+        <p>All our nifsofts</p><h3 id="var/nifsofts_life"><aside class="declaration">var </aside>nifsofts_life
+            <aside>&ndash; /tmp/list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L50">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 50"/></a></h3>
+        <p>Ones that want to be talked to on life()</p><h3 id="var/open"><aside class="declaration">var </aside>open
+            <aside>&ndash; /tmp</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L65">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 65"/></a></h3>
+        <p>If it's open for maintenance (1-3)</p><h3 id="var/owner"><aside class="declaration">var </aside>owner
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L52">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 52"/></a></h3>
+        <p>Owner character name</p><h3 id="var/power_usage"><aside class="declaration">var </aside>power_usage
+            <aside>&ndash; /tmp</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L44">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 44"/></a></h3>
+        <p>Nifsoft adds to this</p><h3 id="var/should_be_in"><aside class="declaration">var </aside>should_be_in
+            <aside>&ndash; /tmp</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L67">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 67"/></a></h3>
+        <p>Organ we're supposed to be held in</p><h3 id="var/stat"><aside class="declaration">var </aside>stat
+            <aside>&ndash; /tmp</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L61">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 61"/></a></h3>
+        <p>Status of the NIF</p><h3 id="var/vision_flags"><aside class="declaration">var </aside>vision_flags
+            <aside>&ndash; /tmp</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif.dm#L56">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif.dm 56"/></a></h3>
+        <p>Flags implants set for faster lookups</p><h2 id="proc">Proc Details</h2><h3 id="proc/ui_act"><aside class="parent"><a title="/datum" href="datum.html#proc/ui_act">&uarr;</a></aside>ui_act<aside>(action, /list/params, /<a href="datum.html">datum</a>/<a href="datum/tgui.html">tgui</a>/ui, /<a href="datum.html">datum</a>/<a href="datum/ui_state.html">ui_state</a>/state) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif_tgui.dm#L155">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif_tgui.dm 155"/></a></aside>
+        </h3>
+        <p>tgui_act handles all user input in the UI.</p><h3 id="proc/ui_data"><aside class="parent"><a title="/datum" href="datum.html#proc/ui_data">&uarr;</a></aside>ui_data<aside>(/<a href="mob.html">mob</a>/user, /<a href="datum.html">datum</a>/<a href="datum/tgui.html">tgui</a>/ui, /<a href="datum.html">datum</a>/<a href="datum/ui_state.html">ui_state</a>/state) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif_tgui.dm#L115">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif_tgui.dm 115"/></a></aside>
+        </h3>
+        <p>tgui_data gives the UI any relevant data it needs.
+In our case, that's basically everything from our statpanel.</p><h3 id="proc/ui_interact"><aside class="parent"><a title="/datum" href="datum.html#proc/ui_interact">&uarr;</a></aside>ui_interact<aside>(/<a href="mob.html">mob</a>/user, /<a href="datum.html">datum</a>/<a href="datum/tgui.html">tgui</a>/ui, /<a href="datum.html">datum</a>/<a href="datum/tgui.html">tgui</a>/parent_ui) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif_tgui.dm#L105">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif_tgui.dm 105"/></a></aside>
+        </h3>
+        <p>Standard TGUI stub to open the NIF.js template.</p><h3 id="proc/ui_state"><aside class="parent"><a title="/datum" href="datum.html#proc/ui_state">&uarr;</a></aside>ui_state<aside>(/<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/nifsoft/nif_tgui.dm#L99">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;nifsoft&#x2F;nif_tgui.dm 99"/></a></aside>
+        </h3>
+        <p>The NIF State ensures that only our authorized implanted user can touch us.</p></main>
+<footer>
+    vorestation.dme
+    <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/326815dfb7907ff359a42d9b7d259f645c74414c">326815d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.3.0</a></footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;machinery&#x2F;partslathe - Citadel Station 13 - HRP</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Citadel Station 13 - HRP</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/machinery/partslathe.html#var">Var Details</a> - <a href="obj/machinery/partslathe.html#proc">Proc Details</a></header>
+<main>
+<h1>parts lathe <aside>/<a href="obj.html">obj</a>/<a href="obj/machinery.html">machinery</a>/<a href="obj/machinery/partslathe.html">partslathe</a></aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/partslathe_vr.dm#L19">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;partslathe_vr.dm 19"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/machinery/partslathe.html#var/busy">busy</a></th><td>Are we currently busy building stuff?</td></tr>
+            <tr><th><a href="obj/machinery/partslathe.html#var/copy_board">copy_board</a></th><td>The inserted board</td></tr>
+            <tr><th><a href="obj/machinery/partslathe.html#var/mat_efficiency">mat_efficiency</a></th><td>Material usage efficiency (less efficient than protolathe)</td></tr>
+            <tr><th><a href="obj/machinery/partslathe.html#var/materials">materials</a></th><td>Amount of materials we can store total</td></tr>
+            <tr><th><a href="obj/machinery/partslathe.html#var/partslathe_recipies">partslathe_recipies</a></th><td>Static list of recipies we will lazily generate
+type -&gt; /datum/category_item/partslathe/</td></tr>
+            <tr><th><a href="obj/machinery/partslathe.html#var/progress">progress</a></th><td>How many machine ticks have we spent building current thing?</td></tr>
+            <tr><th><a href="obj/machinery/partslathe.html#var/queue">queue</a></th><td>The queue of things to build</td></tr>
+            <tr><th><a href="obj/machinery/partslathe.html#var/speed">speed</a></th><td>Ticks per tick build speed multiplier</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/machinery/partslathe.html#proc/update_recipe_list">update_recipe_list</a></th><td>Builds a list of recipies to include all tech level 1 stock parts.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/busy"><aside class="declaration">var </aside>busy
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/partslathe_vr.dm#L38">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;partslathe_vr.dm 38"/></a></h3>
+        <p>Are we currently busy building stuff?</p><h3 id="var/copy_board"><aside class="declaration">var </aside>copy_board
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/circuitboard</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/partslathe_vr.dm#L34">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;partslathe_vr.dm 34"/></a></h3>
+        <p>The inserted board</p><h3 id="var/mat_efficiency"><aside class="declaration">var </aside>mat_efficiency
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/partslathe_vr.dm#L42">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;partslathe_vr.dm 42"/></a></h3>
+        <p>Material usage efficiency (less efficient than protolathe)</p><h3 id="var/materials"><aside class="declaration">var </aside>materials
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/partslathe_vr.dm#L31">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;partslathe_vr.dm 31"/></a></h3>
+        <p>Amount of materials we can store total</p><h3 id="var/partslathe_recipies"><aside class="declaration">var </aside>partslathe_recipies
+            <aside>&ndash; /static/list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/partslathe_vr.dm#L50">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;partslathe_vr.dm 50"/></a></h3>
+        <p>Static list of recipies we will lazily generate
+type -&gt; /datum/category_item/partslathe/</p><h3 id="var/progress"><aside class="declaration">var </aside>progress
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/partslathe_vr.dm#L40">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;partslathe_vr.dm 40"/></a></h3>
+        <p>How many machine ticks have we spent building current thing?</p><h3 id="var/queue"><aside class="declaration">var </aside>queue
+            <aside>&ndash; /list/datum/category_item/partslathe</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/partslathe_vr.dm#L36">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;partslathe_vr.dm 36"/></a></h3>
+        <p>The queue of things to build</p><h3 id="var/speed"><aside class="declaration">var </aside>speed
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/partslathe_vr.dm#L44">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;partslathe_vr.dm 44"/></a></h3>
+        <p>Ticks per tick build speed multiplier</p><h2 id="proc">Proc Details</h2><h3 id="proc/update_recipe_list"><aside class="declaration">proc </aside>update_recipe_list<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/partslathe_vr.dm#L335">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;partslathe_vr.dm 335"/></a></aside>
+        </h3>
+        <p>Builds a list of recipies to include all tech level 1 stock parts.</p></main>
+<footer>
+    vorestation.dme
+    <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/326815dfb7907ff359a42d9b7d259f645c74414c">326815d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.3.0</a></footer>
+</body>
+</html>

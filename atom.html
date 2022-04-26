@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;atom - Citadel Station 13 - HRP</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Citadel Station 13 - HRP</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="atom.html#var">Var Details</a> - <a href="atom.html#proc">Proc Details</a></header>
+<main>
+<h1>/<a href="atom.html">atom</a><aside> inherits /<a href="datum.html">datum</a></aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/_rendering/atom_huds/alternate_appearance.dm#L4">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_rendering&#x2F;atom_huds&#x2F;alternate_appearance.dm 4"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="atom.html#var/base_icon_state">base_icon_state</a></th><td>Used for changing icon states for different base sprites.</td></tr>
+            <tr><th><a href="atom.html#var/base_layer">base_layer</a></th><td>base layer - defaults to layer</td></tr>
+            <tr><th><a href="atom.html#var/base_pixel_x">base_pixel_x</a></th><td>Default pixel x shifting for the atom's icon.</td></tr>
+            <tr><th><a href="atom.html#var/base_pixel_y">base_pixel_y</a></th><td>Default pixel y shifting for the atom's icon.</td></tr>
+            <tr><th><a href="atom.html#var/bottom_left_corner">bottom_left_corner</a></th><td>Smoothing variable</td></tr>
+            <tr><th><a href="atom.html#var/bottom_right_corner">bottom_right_corner</a></th><td>Smoothing variable</td></tr>
+            <tr><th><a href="atom.html#var/canSmoothWith">canSmoothWith</a></th><td>List of smoothing groups this atom can smooth with. If this is null and atom is smooth, it smooths only with itself.</td></tr>
+            <tr><th><a href="atom.html#var/flags">flags</a></th><td>Atom flags</td></tr>
+            <tr><th><a href="atom.html#var/fluorescent">fluorescent</a></th><td>what icon the atom uses for speechbubbles</td></tr>
+            <tr><th><a href="atom.html#var/hud_list">hud_list</a></th><td>This atom's HUD (med/sec, etc) images. Associative list.</td></tr>
+            <tr><th><a href="atom.html#var/hud_possible">hud_possible</a></th><td>HUD images that this atom can provide.</td></tr>
+            <tr><th><a href="atom.html#var/interaction_flags_atom">interaction_flags_atom</a></th><td>Intearaction flags</td></tr>
+            <tr><th><a href="atom.html#var/managed_overlays">managed_overlays</a></th><td>overlays managed by <a href="atom.html#proc/update_overlays" title="/atom">update_overlays</a> to prevent removing overlays that weren't added by the same proc</td></tr>
+            <tr><th><a href="atom.html#var/managed_vis_overlays">managed_vis_overlays</a></th><td>vis overlays managed by SSvis_overlays to automaticaly turn them like other overlays</td></tr>
+            <tr><th><a href="atom.html#var/orbiters">orbiters</a></th><td>The orbiter comopnent if we're being orbited.</td></tr>
+            <tr><th><a href="atom.html#var/original_atom">original_atom</a></th><td>Chemistry.</td></tr>
+            <tr><th><a href="atom.html#var/reagents">reagents</a></th><td>Chemistry.</td></tr>
+            <tr><th><a href="atom.html#var/relative_layer">relative_layer</a></th><td>relative layer - position this atom should be in within things of the same base layer. defaults to 0</td></tr>
+            <tr><th><a href="atom.html#var/smoothing_flags">smoothing_flags</a></th><td>Icon-smoothing behavior.</td></tr>
+            <tr><th><a href="atom.html#var/smoothing_groups">smoothing_groups</a></th><td>What smoothing groups does this atom belongs to, to match canSmoothWith. If null, nobody can smooth with it.</td></tr>
+            <tr><th><a href="atom.html#var/smoothing_junction">smoothing_junction</a></th><td>What directions this is currently smoothing with. IMPORTANT: This uses the smoothing direction flags as defined in icon_smoothing.dm, instead of the BYOND flags.</td></tr>
+            <tr><th><a href="atom.html#var/top_left_corner">top_left_corner</a></th><td>Smoothing variable</td></tr>
+            <tr><th><a href="atom.html#var/top_right_corner">top_right_corner</a></th><td>Smoothing variable</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="atom.html#proc/CanAllowThrough">CanAllowThrough</a></th><td>Returns true or false to allow the mover to move through src</td></tr>
+            <tr><th><a href="atom.html#proc/CanPass">CanPass</a></th><td>Can the mover object pass this atom, while heading for the target turf</td></tr>
+            <tr><th><a href="atom.html#proc/CheckExit">CheckExit</a></th><td>Check if an atom can exit us in movement.</td></tr>
+            <tr><th><a href="atom.html#proc/ConflictElementCount">ConflictElementCount</a></th><td>Counts number of conflicts on something that have a conflict checking element.</td></tr>
+            <tr><th><a href="atom.html#proc/Destroy">Destroy</a></th><td>Top level of the destroy chain for most atoms</td></tr>
+            <tr><th><a href="atom.html#proc/Entered">Entered</a></th><td>An atom has entered this atom's contents</td></tr>
+            <tr><th><a href="atom.html#proc/Exit">Exit</a></th><td>An atom is attempting to exit this atom's contents</td></tr>
+            <tr><th><a href="atom.html#proc/Exited">Exited</a></th><td>An atom has exited this atom's contents</td></tr>
+            <tr><th><a href="atom.html#proc/GetAllContents">GetAllContents</a></th><td>Gets all contents of contents and returns them all in a list.</td></tr>
+            <tr><th><a href="atom.html#proc/SimpleNetworkSend">SimpleNetworkSend</a></th><td>Sends a simple network message.</td></tr>
+            <tr><th><a href="atom.html#proc/_contents">_contents</a></th><td>Wrapper to return a copy of contents, as SDQL2 can't tell an internal list from a normal list.</td></tr>
+            <tr><th><a href="atom.html#proc/add_overlay">add_overlay</a></th><td>Adds specific overlay(s) to the atom.
+It is designed so any of the types allowed to be added to /atom/overlays can be added here too. More details below.</td></tr>
+            <tr><th><a href="atom.html#proc/add_thermal_energy">add_thermal_energy</a></th><td>add/remove thermal energy from air</td></tr>
+            <tr><th><a href="atom.html#proc/assume_air">assume_air</a></th><td>merges all gases from giver into us
+giver is untouched</td></tr>
+            <tr><th><a href="atom.html#proc/assume_gas">assume_gas</a></th><td>adds x moles of a specific gasid at y temperature
+for mass adds, use assume_air with a mixture instead for performance.</td></tr>
+            <tr><th><a href="atom.html#proc/attack_hand">attack_hand</a></th><td>Return TRUE to cancel other attack hand effects that respect it.</td></tr>
+            <tr><th><a href="atom.html#proc/bitmask_smooth">bitmask_smooth</a></th><td>Basic smoothing proc. The atom checks for adjacent directions to smooth with and changes the icon_state based on that.</td></tr>
+            <tr><th><a href="atom.html#proc/calculate_adjacencies">calculate_adjacencies</a></th><td>Scans all adjacent turfs to find targets to smooth with.</td></tr>
+            <tr><th><a href="atom.html#proc/contents_ui_distance">contents_ui_distance</a></th><td>public</td></tr>
+            <tr><th><a href="atom.html#proc/copy_cell_volume">copy_cell_volume</a></th><td>gets a <strong>copy</strong> (read: changing this won't affect turf) of a cell volume's worth of air</td></tr>
+            <tr><th><a href="atom.html#proc/copy_overlays">copy_overlays</a></th><td>Copy the overlays from another atom, either replacing all of ours or appending to our existing overlays.
+Note: This copies only the normal overlays, not the &quot;priority&quot; overlays.</td></tr>
+            <tr><th><a href="atom.html#proc/cut_overlay">cut_overlay</a></th><td>Removes specific overlay(s) from the atom.  Usually does not remove them from &quot;priority&quot; overlays.</td></tr>
+            <tr><th><a href="atom.html#proc/cut_overlays">cut_overlays</a></th><td>Cut all of atom's normal overlays.  Usually leaves &quot;priority&quot; overlays untouched.</td></tr>
+            <tr><th><a href="atom.html#proc/find_type_in_direction">find_type_in_direction</a></th><td>Scans direction to find targets to smooth with.</td></tr>
+            <tr><th><a href="atom.html#proc/get_alarm_area">get_alarm_area</a></th><td>Assisting procs</td></tr>
+            <tr><th><a href="atom.html#proc/get_cell_gases">get_cell_gases</a></th><td>gets full gas list of all gases in a single turf's worth of air</td></tr>
+            <tr><th><a href="atom.html#proc/get_cell_moles">get_cell_moles</a></th><td>gets moles of gas in a single turf's worth of air
+inefficient; use copy_cell_volume() if you're getting more than 2-3 gases!</td></tr>
+            <tr><th><a href="atom.html#proc/get_examine_string">get_examine_string</a></th><td>Generate the full examine string of this atom (including icon for goonchat)</td></tr>
+            <tr><th><a href="atom.html#proc/get_thermal_energy_change">get_thermal_energy_change</a></th><td>get thermal energy needed for our air to be x temperature</td></tr>
+            <tr><th><a href="atom.html#proc/has_gravity">has_gravity</a></th><td>Returns true if this atom has gravity for the passed in turf</td></tr>
+            <tr><th><a href="atom.html#proc/inducer_scan">inducer_scan</a></th><td>even if full, always add things, or the inducer might think we don't support induction when we do!</td></tr>
+            <tr><th><a href="atom.html#proc/remove_cell_volume">remove_cell_volume</a></th><td>remove CELL_VOLUME's worth of air</td></tr>
+            <tr><th><a href="atom.html#proc/remove_cell_volumes">remove_cell_volumes</a></th><td>remove a multiple of CELL_VOLUME's worth of air</td></tr>
+            <tr><th><a href="atom.html#proc/remove_moles">remove_moles</a></th><td>removes a gas mixture of x moles</td></tr>
+            <tr><th><a href="atom.html#proc/remove_volume">remove_volume</a></th><td>removes a gas mixture of x volume</td></tr>
+            <tr><th><a href="atom.html#proc/replace_smooth_overlays">replace_smooth_overlays</a></th><td>Internal: Takes icon states as text to replace smoothing corner overlays</td></tr>
+            <tr><th><a href="atom.html#proc/return_air">return_air</a></th><td>returns a mutable gas mixture, or null
+this does not take into account volume, and for ZAS, can return a whole room's air
+for operations that care about this, prefer using other procs!</td></tr>
+            <tr><th><a href="atom.html#proc/return_pressure">return_pressure</a></th><td>return pressure of air</td></tr>
+            <tr><th><a href="atom.html#proc/return_temperature">return_temperature</a></th><td>return temperature of air</td></tr>
+            <tr><th><a href="atom.html#proc/setDir">setDir</a></th><td>Hook for running code when a dir change occurs</td></tr>
+            <tr><th><a href="atom.html#proc/set_base_layer">set_base_layer</a></th><td>set the new base layer we should be on</td></tr>
+            <tr><th><a href="atom.html#proc/set_base_pixel_x">set_base_pixel_x</a></th><td>Setter for the <code>base_pixel_x</code> variable to append behavior related to its changing.</td></tr>
+            <tr><th><a href="atom.html#proc/set_base_pixel_y">set_base_pixel_y</a></th><td>Setter for the <code>base_pixel_y</code> variable to append behavior related to its changing.</td></tr>
+            <tr><th><a href="atom.html#proc/set_relative_layer">set_relative_layer</a></th><td>set the relative layer within our layer we should be on</td></tr>
+            <tr><th><a href="atom.html#proc/set_smoothed_icon_state">set_smoothed_icon_state</a></th><td>Changes the icon state based on the new junction bitmask. Returns the old junction value.</td></tr>
+            <tr><th><a href="atom.html#proc/singuloCanEat">singuloCanEat</a></th><td>Nar-Sie Act/Pull</td></tr>
+            <tr><th><a href="atom.html#proc/smooth_icon">smooth_icon</a></th><td>do not use, use QUEUE_SMOOTH(atom)</td></tr>
+            <tr><th><a href="atom.html#proc/update_appearance">update_appearance</a></th><td>Updates the appearence of the icon</td></tr>
+            <tr><th><a href="atom.html#proc/update_desc">update_desc</a></th><td>Updates the description of the atom</td></tr>
+            <tr><th><a href="atom.html#proc/update_icon">update_icon</a></th><td>Updates the icon of the atom</td></tr>
+            <tr><th><a href="atom.html#proc/update_icon_state">update_icon_state</a></th><td>Updates the icon state of the atom</td></tr>
+            <tr><th><a href="atom.html#proc/update_name">update_name</a></th><td>Updates the name of the atom</td></tr>
+            <tr><th><a href="atom.html#proc/update_overlays">update_overlays</a></th><td>Updates the overlays of the atom</td></tr>
+            <tr><th><a href="atom.html#proc/use_check">use_check</a></th><td>Checks if user can use this object. Set use_flags to customize what checks are done.
+Returns 0 if they can use it, a value representing why they can't if not.
+Flags are in <code>code/__defines/misc.dm</code></td></tr>
+            <tr><th><a href="atom.html#proc/vv_get_dropdown">vv_get_dropdown</a></th><td>Return the markup to for the dropdown list for the VV panel for this atom</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/base_icon_state"><aside class="declaration">var </aside>base_icon_state
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L55">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 55"/></a></h3>
+        <p>Used for changing icon states for different base sprites.</p><h3 id="var/base_layer"><aside class="declaration">var </aside>base_layer
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L89">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 89"/></a></h3>
+        <p>base layer - defaults to layer</p><h3 id="var/base_pixel_x"><aside class="declaration">var </aside>base_pixel_x
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L51">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 51"/></a></h3>
+        <p>Default pixel x shifting for the atom's icon.</p><h3 id="var/base_pixel_y"><aside class="declaration">var </aside>base_pixel_y
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L53">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 53"/></a></h3>
+        <p>Default pixel y shifting for the atom's icon.</p><h3 id="var/bottom_left_corner"><aside class="declaration">var </aside>bottom_left_corner
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L66">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 66"/></a></h3>
+        <p>Smoothing variable</p><h3 id="var/bottom_right_corner"><aside class="declaration">var </aside>bottom_right_corner
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L68">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 68"/></a></h3>
+        <p>Smoothing variable</p><h3 id="var/canSmoothWith"><aside class="declaration">var </aside>canSmoothWith
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L72">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 72"/></a></h3>
+        <p>List of smoothing groups this atom can smooth with. If this is null and atom is smooth, it smooths only with itself.</p><h3 id="var/flags"><aside class="declaration">var </aside>flags
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 6"/></a></h3>
+        <p>Atom flags</p><h3 id="var/fluorescent"><aside class="declaration">var </aside>fluorescent
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 23"/></a></h3>
+        <p>what icon the atom uses for speechbubbles</p><h3 id="var/hud_list"><aside class="declaration">var </aside>hud_list
+            <aside>&ndash; /list/image</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L26">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 26"/></a></h3>
+        <p>This atom's HUD (med/sec, etc) images. Associative list.</p><h3 id="var/hud_possible"><aside class="declaration">var </aside>hud_possible
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L28">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 28"/></a></h3>
+        <p>HUD images that this atom can provide.</p><h3 id="var/interaction_flags_atom"><aside class="declaration">var </aside>interaction_flags_atom
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L8">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 8"/></a></h3>
+        <p>Intearaction flags</p><h3 id="var/managed_overlays"><aside class="declaration">var </aside>managed_overlays
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L43">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 43"/></a></h3>
+        <p>overlays managed by <a href="atom.html#proc/update_overlays" title="/atom">update_overlays</a> to prevent removing overlays that weren't added by the same proc</p><h3 id="var/managed_vis_overlays"><aside class="declaration">var </aside>managed_vis_overlays
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L41">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 41"/></a></h3>
+        <p>vis overlays managed by SSvis_overlays to automaticaly turn them like other overlays</p><h3 id="var/orbiters"><aside class="declaration">var </aside>orbiters
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/component.html">component</a>/orbiter</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L48">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 48"/></a></h3>
+        <p>The orbiter comopnent if we're being orbited.</p><h3 id="var/original_atom"><aside class="declaration">var </aside>original_atom
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L82">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 82"/></a></h3>
+        <p>Chemistry.</p><h3 id="var/reagents"><aside class="declaration">var </aside>reagents
+            <aside>&ndash; /<a href="datum.html">datum</a>/reagents</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L75">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 75"/></a></h3>
+        <p>Chemistry.</p><h3 id="var/relative_layer"><aside class="declaration">var </aside>relative_layer
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L91">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 91"/></a></h3>
+        <p>relative layer - position this atom should be in within things of the same base layer. defaults to 0</p><h3 id="var/smoothing_flags"><aside class="declaration">var </aside>smoothing_flags
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L58">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 58"/></a></h3>
+        <p>Icon-smoothing behavior.</p><h3 id="var/smoothing_groups"><aside class="declaration">var </aside>smoothing_groups
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L70">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 70"/></a></h3>
+        <p>What smoothing groups does this atom belongs to, to match canSmoothWith. If null, nobody can smooth with it.</p><h3 id="var/smoothing_junction"><aside class="declaration">var </aside>smoothing_junction
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L60">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 60"/></a></h3>
+        <p>What directions this is currently smoothing with. IMPORTANT: This uses the smoothing direction flags as defined in icon_smoothing.dm, instead of the BYOND flags.</p><h3 id="var/top_left_corner"><aside class="declaration">var </aside>top_left_corner
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L62">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 62"/></a></h3>
+        <p>Smoothing variable</p><h3 id="var/top_right_corner"><aside class="declaration">var </aside>top_right_corner
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L64">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 64"/></a></h3>
+        <p>Smoothing variable</p><h2 id="proc">Proc Details</h2><h3 id="proc/CanAllowThrough"><aside class="declaration">proc </aside>CanAllowThrough<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/mover, /<a href="turf.html">turf</a>/target) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atom_movement.dm#L48">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atom_movement.dm 48"/></a></aside>
+        </h3>
+        <p>Returns true or false to allow the mover to move through src</p><h3 id="proc/CanPass"><aside class="declaration">proc </aside>CanPass<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/mover, /<a href="turf.html">turf</a>/target) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atom_movement.dm#L37">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atom_movement.dm 37"/></a></aside>
+        </h3>
+        <p>Can the mover object pass this atom, while heading for the target turf</p><h3 id="proc/CheckExit"><aside class="declaration">proc </aside>CheckExit<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/AM, /<a href="atom.html">atom</a>/newLoc) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atom_movement.dm#L33">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atom_movement.dm 33"/></a></aside>
+        </h3>
+        <p>Check if an atom can exit us in movement.</p><h3 id="proc/ConflictElementCount"><aside class="declaration">proc </aside>ConflictElementCount<aside>(id) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/datums/elements/conflict_checking.dm#L30">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;elements&#x2F;conflict_checking.dm 30"/></a></aside>
+        </h3>
+        <p>Counts number of conflicts on something that have a conflict checking element.</p><h3 id="proc/Destroy"><aside class="parent"><a title="/datum" href="datum.html#proc/Destroy">&uarr;</a></aside>Destroy<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L173">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 173"/></a></aside>
+        </h3>
+        <p>Top level of the destroy chain for most atoms</p>
+<p>Cleans up the following:</p>
+<ul>
+<li>Removes alternate apperances from huds that see them</li>
+<li>qdels the reagent holder from atoms if it exists</li>
+<li>clears the orbiters list</li>
+<li>clears overlays and priority overlays</li>
+<li>clears the light object</li>
+</ul><h3 id="proc/Entered"><aside class="declaration">proc </aside>Entered<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/AM, /<a href="atom.html">atom</a>/oldLoc) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atom_movement.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atom_movement.dm 6"/></a></aside>
+        </h3>
+        <p>An atom has entered this atom's contents</p>
+<p>Default behaviour is to send the [COMSIG_ATOM_ENTERED]</p><h3 id="proc/Exit"><aside class="declaration">proc </aside>Exit<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/AM, /<a href="atom.html">atom</a>/newLoc) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atom_movement.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atom_movement.dm 17"/></a></aside>
+        </h3>
+        <p>An atom is attempting to exit this atom's contents</p>
+<p>Default behaviour is to send the [COMSIG_ATOM_EXIT]</p>
+<p>Return value should be set to FALSE if the moving atom is unable to leave,
+otherwise leave value the result of the parent call</p><h3 id="proc/Exited"><aside class="declaration">proc </aside>Exited<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/AM, /<a href="atom.html">atom</a>/newLoc) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atom_movement.dm#L27">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atom_movement.dm 27"/></a></aside>
+        </h3>
+        <p>An atom has exited this atom's contents</p>
+<p>Default behaviour is to send the [COMSIG_ATOM_EXITED]</p><h3 id="proc/GetAllContents"><aside class="declaration">proc </aside>GetAllContents<aside>(T) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__HELPERS/unsorted.dm#L599">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 599"/></a></aside>
+        </h3>
+        <p>Gets all contents of contents and returns them all in a list.</p><h3 id="proc/SimpleNetworkSend"><aside class="parent"><a title="/datum" href="datum.html#proc/SimpleNetworkSend">&uarr;</a></aside>SimpleNetworkSend<aside>(id, message, /list/data, range) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/networks/simple/atom.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;networks&#x2F;simple&#x2F;atom.dm 10"/></a></aside>
+        </h3>
+        <p>Sends a simple network message.</p>
+<p>@param
+id - id of network to send to
+message - message to send or null
+data - arbitrary list or null
+range - range from the current atom, defaults to ignoring.</p><h3 id="proc/_contents"><aside class="declaration">proc </aside>_contents<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/admin/verbs/SDQL2/SDQL_2_wrappers.dm#L257">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;admin&#x2F;verbs&#x2F;SDQL2&#x2F;SDQL_2_wrappers.dm 257"/></a></aside>
+        </h3>
+        <p>Wrapper to return a copy of contents, as SDQL2 can't tell an internal list from a normal list.</p><h3 id="proc/add_overlay"><aside class="declaration">proc </aside>add_overlay<aside>(/list/overlays, priority) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/overlays.dm#L174">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;overlays.dm 174"/></a></aside>
+        </h3>
+        <p>Adds specific overlay(s) to the atom.
+It is designed so any of the types allowed to be added to /atom/overlays can be added here too. More details below.</p>
+<p>@param overlays The overlay(s) to add.  These may be
+- A string: In which case it is treated as an icon_state of the atom's icon.
+- An icon: It is treated as an icon.
+- An atom: Its own overlays are compiled and then it's appearance is added. (Meaning its current apperance is frozen).
+- An image: Image's apperance is added (i.e. subsequently editing the image will not edit the overlay)
+- A type path: Added to overlays as is.  Does whatever it is BYOND does when you add paths to overlays.
+- Or a list containing any of the above.
+@param priority The overlays are added to the &quot;priority&quot; list istead of the normal one.</p><h3 id="proc/add_thermal_energy"><aside class="declaration">proc </aside>add_thermal_energy<aside>(joules) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/atmospherics/environmental/turf_public.dm#L46">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;environmental&#x2F;turf_public.dm 46"/></a></aside>
+        </h3>
+        <p>add/remove thermal energy from air</p><h3 id="proc/assume_air"><aside class="declaration">proc </aside>assume_air<aside>(/<a href="datum.html">datum</a>/<a href="datum/gas_mixture.html">gas_mixture</a>/giver) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/atmospherics/environmental/turf_public.dm#L16">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;environmental&#x2F;turf_public.dm 16"/></a></aside>
+        </h3>
+        <p>merges all gases from giver into us
+giver is untouched</p><h3 id="proc/assume_gas"><aside class="declaration">proc </aside>assume_gas<aside>(gasid, moles, temp) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/atmospherics/environmental/turf_public.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;environmental&#x2F;turf_public.dm 23"/></a></aside>
+        </h3>
+        <p>adds x moles of a specific gasid at y temperature
+for mass adds, use assume_air with a mixture instead for performance.</p><h3 id="proc/attack_hand"><aside class="declaration">proc </aside>attack_hand<aside>(/<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/_onclick/other_mobs.dm#L32">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_onclick&#x2F;other_mobs.dm 32"/></a></aside>
+        </h3>
+        <p>Return TRUE to cancel other attack hand effects that respect it.</p><h3 id="proc/bitmask_smooth"><aside class="declaration">proc </aside>bitmask_smooth<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__HELPERS/icon_smoothing.dm#L330">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;icon_smoothing.dm 330"/></a></aside>
+        </h3>
+        <p>Basic smoothing proc. The atom checks for adjacent directions to smooth with and changes the icon_state based on that.</p>
+<p>Returns the previous smoothing_junction state so the previous state can be compared with the new one after the proc ends, and see the changes, if any.</p><h3 id="proc/calculate_adjacencies"><aside class="declaration">proc </aside>calculate_adjacencies<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__HELPERS/icon_smoothing.dm#L97">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;icon_smoothing.dm 97"/></a></aside>
+        </h3>
+        <p>Scans all adjacent turfs to find targets to smooth with.</p><h3 id="proc/contents_ui_distance"><aside class="declaration">proc </aside>contents_ui_distance<aside>(src_object, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/tgui/states.dm#L106">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgui&#x2F;states.dm 106"/></a></aside>
+        </h3>
+        <p>public</p>
+<p>Check the distance for a living mob.
+Really only used for checks outside the context of a mob.
+Otherwise, use shared_living_ui_distance().</p>
+<p>required src_object The object which owns the UI.
+required user mob The mob who opened/is using the UI.</p>
+<p>return UI_state The state of the UI.</p><h3 id="proc/copy_cell_volume"><aside class="declaration">proc </aside>copy_cell_volume<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/atmospherics/environmental/turf_public.dm#L78">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;environmental&#x2F;turf_public.dm 78"/></a></aside>
+        </h3>
+        <p>gets a <strong>copy</strong> (read: changing this won't affect turf) of a cell volume's worth of air</p><h3 id="proc/copy_overlays"><aside class="declaration">proc </aside>copy_overlays<aside>(/<a href="atom.html">atom</a>/other, cut_old) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/overlays.dm#L206">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;overlays.dm 206"/></a></aside>
+        </h3>
+        <p>Copy the overlays from another atom, either replacing all of ours or appending to our existing overlays.
+Note: This copies only the normal overlays, not the &quot;priority&quot; overlays.</p>
+<p>@param other The atom to copy overlays from.
+@param cut_old If true, all of our overlays will be <em>replaced</em> by the other's. If other is null, that means cutting all ours.</p><h3 id="proc/cut_overlay"><aside class="declaration">proc </aside>cut_overlay<aside>(/list/overlays, priority) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/overlays.dm#L143">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;overlays.dm 143"/></a></aside>
+        </h3>
+        <p>Removes specific overlay(s) from the atom.  Usually does not remove them from &quot;priority&quot; overlays.</p>
+<p>@param overlays The overlays to removed, type can be anything that is allowed for add_overlay().
+@param priority If true, also will remove them from the &quot;priority&quot; overlays.</p><h3 id="proc/cut_overlays"><aside class="declaration">proc </aside>cut_overlays<aside>(priority) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/controllers/subsystem/overlays.dm#L120">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;overlays.dm 120"/></a></aside>
+        </h3>
+        <p>Cut all of atom's normal overlays.  Usually leaves &quot;priority&quot; overlays untouched.</p>
+<p>@param priority If true, also will cut priority overlays.</p><h3 id="proc/find_type_in_direction"><aside class="declaration">proc </aside>find_type_in_direction<aside>(direction) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__HELPERS/icon_smoothing.dm#L289">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;icon_smoothing.dm 289"/></a></aside>
+        </h3>
+        <p>Scans direction to find targets to smooth with.</p><h3 id="proc/get_alarm_area"><aside class="declaration">proc </aside>get_alarm_area<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/alarm/alarm.dm#L100">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;alarm&#x2F;alarm.dm 100"/></a></aside>
+        </h3>
+        <p>Assisting procs</p><h3 id="proc/get_cell_gases"><aside class="declaration">proc </aside>get_cell_gases<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/atmospherics/environmental/turf_public.dm#L98">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;environmental&#x2F;turf_public.dm 98"/></a></aside>
+        </h3>
+        <p>gets full gas list of all gases in a single turf's worth of air</p><h3 id="proc/get_cell_moles"><aside class="declaration">proc </aside>get_cell_moles<aside>(gasid) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/atmospherics/environmental/turf_public.dm#L92">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;environmental&#x2F;turf_public.dm 92"/></a></aside>
+        </h3>
+        <p>gets moles of gas in a single turf's worth of air
+inefficient; use copy_cell_volume() if you're getting more than 2-3 gases!</p><h3 id="proc/get_examine_string"><aside class="declaration">proc </aside>get_examine_string<aside>(/<a href="mob.html">mob</a>/user, thats) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L295">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 295"/></a></aside>
+        </h3>
+        <p>Generate the full examine string of this atom (including icon for goonchat)</p><h3 id="proc/get_thermal_energy_change"><aside class="declaration">proc </aside>get_thermal_energy_change<aside>(target_temperature) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/atmospherics/environmental/turf_public.dm#L52">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;environmental&#x2F;turf_public.dm 52"/></a></aside>
+        </h3>
+        <p>get thermal energy needed for our air to be x temperature</p><h3 id="proc/has_gravity"><aside class="declaration">proc </aside>has_gravity<aside>(/<a href="turf.html">turf</a>/T) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L847">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 847"/></a></aside>
+        </h3>
+        <p>Returns true if this atom has gravity for the passed in turf</p>
+<p>Sends signals COMSIG_ATOM_HAS_GRAVITY and COMSIG_TURF_HAS_GRAVITY, both can force gravity with
+the forced gravity var</p>
+<p>Gravity situations:</p>
+<ul>
+<li>No gravity if you're not in a turf</li>
+<li>No gravity if this atom is in is a space turf</li>
+<li>Gravity if the area it's in always has gravity</li>
+<li>Gravity if there's a gravity generator on the z level</li>
+<li>Gravity if the Z level has an SSMappingTrait for ZTRAIT_GRAVITY</li>
+<li>otherwise no gravity</li>
+</ul><h3 id="proc/inducer_scan"><aside class="declaration">proc </aside>inducer_scan<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/inducer.html">inducer</a>/I, /list/things_to_induce, inducer_flags) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/objects/items/inducer.dm#L248">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;inducer.dm 248"/></a></aside>
+        </h3>
+        <p>even if full, always add things, or the inducer might think we don't support induction when we do!</p><h3 id="proc/remove_cell_volume"><aside class="declaration">proc </aside>remove_cell_volume<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/atmospherics/environmental/turf_public.dm#L58">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;environmental&#x2F;turf_public.dm 58"/></a></aside>
+        </h3>
+        <p>remove CELL_VOLUME's worth of air</p><h3 id="proc/remove_cell_volumes"><aside class="declaration">proc </aside>remove_cell_volumes<aside>(multiplier) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/atmospherics/environmental/turf_public.dm#L65">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;environmental&#x2F;turf_public.dm 65"/></a></aside>
+        </h3>
+        <p>remove a multiple of CELL_VOLUME's worth of air</p><h3 id="proc/remove_moles"><aside class="declaration">proc </aside>remove_moles<aside>(moles) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/atmospherics/environmental/turf_public.dm#L32">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;environmental&#x2F;turf_public.dm 32"/></a></aside>
+        </h3>
+        <p>removes a gas mixture of x moles</p><h3 id="proc/remove_volume"><aside class="declaration">proc </aside>remove_volume<aside>(liters) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/atmospherics/environmental/turf_public.dm#L39">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;environmental&#x2F;turf_public.dm 39"/></a></aside>
+        </h3>
+        <p>removes a gas mixture of x volume</p><h3 id="proc/replace_smooth_overlays"><aside class="declaration">proc </aside>replace_smooth_overlays<aside>(nw, ne, sw, se) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__HELPERS/icon_smoothing.dm#L427">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;icon_smoothing.dm 427"/></a></aside>
+        </h3>
+        <p>Internal: Takes icon states as text to replace smoothing corner overlays</p><h3 id="proc/return_air"><aside class="declaration">proc </aside>return_air<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/atmospherics/environmental/turf.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;environmental&#x2F;turf.dm 11"/></a></aside>
+        </h3>
+        <p>returns a mutable gas mixture, or null
+this does not take into account volume, and for ZAS, can return a whole room's air
+for operations that care about this, prefer using other procs!</p><h3 id="proc/return_pressure"><aside class="declaration">proc </aside>return_pressure<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/atmospherics/environmental/turf_public.dm#L72">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;environmental&#x2F;turf_public.dm 72"/></a></aside>
+        </h3>
+        <p>return pressure of air</p><h3 id="proc/return_temperature"><aside class="declaration">proc </aside>return_temperature<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/atmospherics/environmental/turf_public.dm#L85">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;environmental&#x2F;turf_public.dm 85"/></a></aside>
+        </h3>
+        <p>return temperature of air</p><h3 id="proc/setDir"><aside class="declaration">proc </aside>setDir<aside>(newdir) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms_movable_movement.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms_movable_movement.dm 6"/></a></aside>
+        </h3>
+        <p>Hook for running code when a dir change occurs</p>
+<p>Not recommended to use, listen for the [COMSIG_ATOM_DIR_CHANGE] signal instead (sent by this proc)</p><h3 id="proc/set_base_layer"><aside class="declaration">proc </aside>set_base_layer<aside>(new_layer) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L1018">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 1018"/></a></aside>
+        </h3>
+        <p>set the new base layer we should be on</p><h3 id="proc/set_base_pixel_x"><aside class="declaration">proc </aside>set_base_pixel_x<aside>(new_value) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L815">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 815"/></a></aside>
+        </h3>
+        <p>Setter for the <code>base_pixel_x</code> variable to append behavior related to its changing.</p><h3 id="proc/set_base_pixel_y"><aside class="declaration">proc </aside>set_base_pixel_y<aside>(new_value) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L825">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 825"/></a></aside>
+        </h3>
+        <p>Setter for the <code>base_pixel_y</code> variable to append behavior related to its changing.</p><h3 id="proc/set_relative_layer"><aside class="declaration">proc </aside>set_relative_layer<aside>(new_layer) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L1027">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 1027"/></a></aside>
+        </h3>
+        <p>set the relative layer within our layer we should be on</p><h3 id="proc/set_smoothed_icon_state"><aside class="declaration">proc </aside>set_smoothed_icon_state<aside>(new_junction) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__HELPERS/icon_smoothing.dm#L358">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;icon_smoothing.dm 358"/></a></aside>
+        </h3>
+        <p>Changes the icon state based on the new junction bitmask. Returns the old junction value.</p><h3 id="proc/singuloCanEat"><aside class="declaration">proc </aside>singuloCanEat<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/modules/power/singularity/act.dm#L149">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;power&#x2F;singularity&#x2F;act.dm 149"/></a></aside>
+        </h3>
+        <p>Nar-Sie Act/Pull</p><h3 id="proc/smooth_icon"><aside class="declaration">proc </aside>smooth_icon<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__HELPERS/icon_smoothing.dm#L153">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;icon_smoothing.dm 153"/></a></aside>
+        </h3>
+        <p>do not use, use QUEUE_SMOOTH(atom)</p><h3 id="proc/update_appearance"><aside class="declaration">proc </aside>update_appearance<aside>(updates) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L330">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 330"/></a></aside>
+        </h3>
+        <p>Updates the appearence of the icon</p>
+<p>Mostly delegates to update_name, update_desc, and update_icon</p>
+<p>Arguments:</p>
+<ul>
+<li>updates: A set of bitflags dictating what should be updated. Defaults to <a href="code/__DEFINES/_flags/_flags.html#define/ALL" title="ALL">ALL</a></li>
+</ul><h3 id="proc/update_desc"><aside class="declaration">proc </aside>update_desc<aside>(updates) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L349">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 349"/></a></aside>
+        </h3>
+        <p>Updates the description of the atom</p><h3 id="proc/update_icon"><aside class="declaration">proc </aside>update_icon<aside>(updates) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L354">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 354"/></a></aside>
+        </h3>
+        <p>Updates the icon of the atom</p><h3 id="proc/update_icon_state"><aside class="declaration">proc </aside>update_icon_state<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L383">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 383"/></a></aside>
+        </h3>
+        <p>Updates the icon state of the atom</p><h3 id="proc/update_name"><aside class="declaration">proc </aside>update_name<aside>(updates) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L344">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 344"/></a></aside>
+        </h3>
+        <p>Updates the name of the atom</p><h3 id="proc/update_overlays"><aside class="declaration">proc </aside>update_overlays<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atoms.dm#L388">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 388"/></a></aside>
+        </h3>
+        <p>Updates the overlays of the atom</p><h3 id="proc/use_check"><aside class="declaration">proc </aside>use_check<aside>(/<a href="mob.html">mob</a>/user, use_flags, show_messages) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/__HELPERS/unsorted.dm#L1501">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 1501"/></a></aside>
+        </h3>
+        <p>Checks if user can use this object. Set use_flags to customize what checks are done.
+Returns 0 if they can use it, a value representing why they can't if not.
+Flags are in <code>code/__defines/misc.dm</code></p><h3 id="proc/vv_get_dropdown">vv_get_dropdown<aside>() 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/atom_vv.dm#L57">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atom_vv.dm 57"/></a></aside>
+        </h3>
+        <p>Return the markup to for the dropdown list for the VV panel for this atom</p>
+<p>Override in subtypes to add custom VV handling in the VV panel</p></main>
+<footer>
+    vorestation.dme
+    <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/326815dfb7907ff359a42d9b7d259f645c74414c">326815d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.3.0</a></footer>
+</body>
+</html>

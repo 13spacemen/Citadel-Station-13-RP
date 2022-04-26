@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;item&#x2F;pipe_dispenser - Citadel Station 13 - HRP</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Citadel Station 13 - HRP</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/item/pipe_dispenser.html#var">Var Details</a> - <a href="obj/item/pipe_dispenser.html#proc">Proc Details</a></header>
+<main>
+<h1>Rapid Piping Device (RPD) <aside>/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/pipe_dispenser.html">pipe_dispenser</a></aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/objects/items/weapons/RPD.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;weapons&#x2F;RPD.dm 10"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/item/pipe_dispenser.html#var/category">category</a></th><td>Category currently active (Atmos, disposal, transit)</td></tr>
+            <tr><th><a href="obj/item/pipe_dispenser.html#var/first_atmos">first_atmos</a></th><td>Stores the first atmos device</td></tr>
+            <tr><th><a href="obj/item/pipe_dispenser.html#var/first_disposal">first_disposal</a></th><td>Stores the first disposal device</td></tr>
+            <tr><th><a href="obj/item/pipe_dispenser.html#var/mode">mode</a></th><td>Stores the first transit device
+The modes that are allowed for the RPD</td></tr>
+            <tr><th><a href="obj/item/pipe_dispenser.html#var/p_dir">p_dir</a></th><td>Direction of the device we are going to spawn, set up in the UI</td></tr>
+            <tr><th><a href="obj/item/pipe_dispenser.html#var/p_flipped">p_flipped</a></th><td>Is the device of the flipped type?</td></tr>
+            <tr><th><a href="obj/item/pipe_dispenser.html#var/p_init_dir">p_init_dir</a></th><td>Initial direction of the smart pipe we are going to spawn, set up in the UI</td></tr>
+            <tr><th><a href="obj/item/pipe_dispenser.html#var/paint_color">paint_color</a></th><td>Color of the device we are going to spawn</td></tr>
+            <tr><th><a href="obj/item/pipe_dispenser.html#var/piping_layer">piping_layer</a></th><td>Piping layer we are going to spawn the atmos device in</td></tr>
+            <tr><th><a href="obj/item/pipe_dispenser.html#var/recipe">recipe</a></th><td>Stores the current device to spawn</td></tr>
+            <tr><th><a href="obj/item/pipe_dispenser.html#var/spark_system">spark_system</a></th><td>Sparks system used when changing device in the UI</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/item/pipe_dispenser.html#proc/attack_self">attack_self</a></th><td>obj/item/pipe_dispenser/cyborg_unequip(mob/user)</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/category"><aside class="declaration">var </aside>category
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/objects/items/weapons/RPD.dm#L40">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;weapons&#x2F;RPD.dm 40"/></a></h3>
+        <p>Category currently active (Atmos, disposal, transit)</p><h3 id="var/first_atmos"><aside class="declaration">var </aside>first_atmos
+            <aside>&ndash; /static/<a href="datum.html">datum</a>/pipe_info</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/objects/items/weapons/RPD.dm#L47">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;weapons&#x2F;RPD.dm 47"/></a></h3>
+        <p>Stores the first atmos device</p><h3 id="var/first_disposal"><aside class="declaration">var </aside>first_disposal
+            <aside>&ndash; /static/<a href="datum.html">datum</a>/pipe_info</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/objects/items/weapons/RPD.dm#L49">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;weapons&#x2F;RPD.dm 49"/></a></h3>
+        <p>Stores the first disposal device</p><h3 id="var/mode"><aside class="declaration">var </aside>mode
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/objects/items/weapons/RPD.dm#L53">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;weapons&#x2F;RPD.dm 53"/></a></h3>
+        <p>Stores the first transit device
+The modes that are allowed for the RPD</p><h3 id="var/p_dir"><aside class="declaration">var </aside>p_dir
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/objects/items/weapons/RPD.dm#L32">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;weapons&#x2F;RPD.dm 32"/></a></h3>
+        <p>Direction of the device we are going to spawn, set up in the UI</p><h3 id="var/p_flipped"><aside class="declaration">var </aside>p_flipped
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/objects/items/weapons/RPD.dm#L36">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;weapons&#x2F;RPD.dm 36"/></a></h3>
+        <p>Is the device of the flipped type?</p><h3 id="var/p_init_dir"><aside class="declaration">var </aside>p_init_dir
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/objects/items/weapons/RPD.dm#L34">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;weapons&#x2F;RPD.dm 34"/></a></h3>
+        <p>Initial direction of the smart pipe we are going to spawn, set up in the UI</p><h3 id="var/paint_color"><aside class="declaration">var </aside>paint_color
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/objects/items/weapons/RPD.dm#L38">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;weapons&#x2F;RPD.dm 38"/></a></h3>
+        <p>Color of the device we are going to spawn</p><h3 id="var/piping_layer"><aside class="declaration">var </aside>piping_layer
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/objects/items/weapons/RPD.dm#L42">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;weapons&#x2F;RPD.dm 42"/></a></h3>
+        <p>Piping layer we are going to spawn the atmos device in</p><h3 id="var/recipe"><aside class="declaration">var </aside>recipe
+            <aside>&ndash; /<a href="datum.html">datum</a>/pipe_info</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/objects/items/weapons/RPD.dm#L45">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;weapons&#x2F;RPD.dm 45"/></a></h3>
+        <p>Stores the current device to spawn</p><h3 id="var/spark_system"><aside class="declaration">var </aside>spark_system
+            <aside>&ndash; /<a href="datum.html">datum</a>/effect_system/spark_spread</aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/objects/items/weapons/RPD.dm#L30">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;weapons&#x2F;RPD.dm 30"/></a></h3>
+        <p>Sparks system used when changing device in the UI</p><h2 id="proc">Proc Details</h2><h3 id="proc/attack_self">attack_self<aside>(/<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/objects/items/weapons/RPD.dm#L110">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;weapons&#x2F;RPD.dm 110"/></a></aside>
+        </h3>
+        <p>obj/item/pipe_dispenser/cyborg_unequip(mob/user)</p></main>
+<footer>
+    vorestation.dme
+    <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/326815dfb7907ff359a42d9b7d259f645c74414c">326815d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.3.0</a></footer>
+</body>
+</html>

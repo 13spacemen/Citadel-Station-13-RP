@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;machinery&#x2F;computer&#x2F;operating - Citadel Station 13 - HRP</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Citadel Station 13 - HRP</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/machinery/computer/operating.html#var">Var Details</a> - <a href="obj/machinery/computer/operating.html#proc">Proc Details</a></header>
+<main>
+<h1>patient monitoring console <aside>/<a href="obj.html">obj</a>/<a href="obj/machinery.html">machinery</a>/<a href="obj/machinery/computer/operating.html">computer/operating</a></aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/computer/Operating.dm#L3">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;computer&#x2F;Operating.dm 3"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/machinery/computer/operating.html#var/choice">choice</a></th><td>Just for going into and out of the options menu</td></tr>
+            <tr><th><a href="obj/machinery/computer/operating.html#var/crit">crit</a></th><td>Crit beeping toggle</td></tr>
+            <tr><th><a href="obj/machinery/computer/operating.html#var/healthAlarm">healthAlarm</a></th><td>Health at which the computer will beep.</td></tr>
+            <tr><th><a href="obj/machinery/computer/operating.html#var/healthAnnounce">healthAnnounce</a></th><td>Healther announcer toggle</td></tr>
+            <tr><th><a href="obj/machinery/computer/operating.html#var/oxy">oxy</a></th><td>Oxygen beeping toggle</td></tr>
+            <tr><th><a href="obj/machinery/computer/operating.html#var/oxyAlarm">oxyAlarm</a></th><td>Oxy damage at which the computer will beep.</td></tr>
+            <tr><th><a href="obj/machinery/computer/operating.html#var/patientName">patientName</a></th><td>The name of our vic- I mean patient.</td></tr>
+            <tr><th><a href="obj/machinery/computer/operating.html#var/verbose">verbose</a></th><td>General speaker toggle.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/machinery/computer/operating.html#proc/find_next_steps">find_next_steps</a></th><td>Funnily enough, this proc is actually considerably less awful than find_stage.
+All we have to do is check what surgeries can be done, like surgery mechanics themselves do.
+Then, build a string telling the user what they can do next.</td></tr>
+            <tr><th><a href="obj/machinery/computer/operating.html#proc/find_stage">find_stage</a></th><td>This proc is actually hell. I hate the surgery system Polaris uses.
+Basically, surgery is completely stateless, and what &quot;stage&quot; we're on is just dependent
+on the current state of 5 separate variables that determine what stages we can perform
+next.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/choice"><aside class="declaration">var </aside>choice
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/computer/Operating.dm#L27">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;computer&#x2F;Operating.dm 27"/></a></h3>
+        <p>Just for going into and out of the options menu</p><h3 id="var/crit"><aside class="declaration">var </aside>crit
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/computer/Operating.dm#L19">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;computer&#x2F;Operating.dm 19"/></a></h3>
+        <p>Crit beeping toggle</p><h3 id="var/healthAlarm"><aside class="declaration">var </aside>healthAlarm
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/computer/Operating.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;computer&#x2F;Operating.dm 17"/></a></h3>
+        <p>Health at which the computer will beep.</p><h3 id="var/healthAnnounce"><aside class="declaration">var </aside>healthAnnounce
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/computer/Operating.dm#L15">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;computer&#x2F;Operating.dm 15"/></a></h3>
+        <p>Healther announcer toggle</p><h3 id="var/oxy"><aside class="declaration">var </aside>oxy
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/computer/Operating.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;computer&#x2F;Operating.dm 21"/></a></h3>
+        <p>Oxygen beeping toggle</p><h3 id="var/oxyAlarm"><aside class="declaration">var </aside>oxyAlarm
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/computer/Operating.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;computer&#x2F;Operating.dm 23"/></a></h3>
+        <p>Oxy damage at which the computer will beep.</p><h3 id="var/patientName"><aside class="declaration">var </aside>patientName
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/computer/Operating.dm#L25">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;computer&#x2F;Operating.dm 25"/></a></h3>
+        <p>The name of our vic- I mean patient.</p><h3 id="var/verbose"><aside class="declaration">var </aside>verbose
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/computer/Operating.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;computer&#x2F;Operating.dm 13"/></a></h3>
+        <p>General speaker toggle.</p><h2 id="proc">Proc Details</h2><h3 id="proc/find_next_steps"><aside class="declaration">proc </aside>find_next_steps<aside>(/<a href="mob.html">mob</a>/user, zone) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/computer/Operating.dm#L303">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;computer&#x2F;Operating.dm 303"/></a></aside>
+        </h3>
+        <p>Funnily enough, this proc is actually considerably less awful than find_stage.
+All we have to do is check what surgeries can be done, like surgery mechanics themselves do.
+Then, build a string telling the user what they can do next.</p><h3 id="proc/find_stage"><aside class="declaration">proc </aside>find_stage<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/organ.html">organ</a>/<a href="obj/item/organ/external.html">external</a>/E) 
+        
+    
+            <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/blob/326815dfb7907ff359a42d9b7d259f645c74414c/code/game/machinery/computer/Operating.dm#L231">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;computer&#x2F;Operating.dm 231"/></a></aside>
+        </h3>
+        <p>This proc is actually hell. I hate the surgery system Polaris uses.
+Basically, surgery is completely stateless, and what &quot;stage&quot; we're on is just dependent
+on the current state of 5 separate variables that determine what stages we can perform
+next.</p>
+<p>So, here's a little guide to understand this proc:
+Surgery is broken down into 5 different variables:
+<code>open</code>,
+<code>stage</code>,
+<code>cavity</code>,
+<code>burn_stage</code>,
+and <code>brute_stage</code>.
+Naturally, the values assigned to these don't use defines or names or anything, they're just magic numbers.
+So, we have to figure out ourselves what we should call each value.
+Open can be 4 values, and represents the &quot;openness&quot; of the surgery site.
+1 = Cut Open.
+2 = Retracted.
+2.5 = Bones cut.
+3 = Bones spread.
+Stage can be 3 values, and represents the progress in fixing broken bones
+0 = Closed, can be either &quot;we're done&quot; or &quot;we haven't started&quot; FFS.
+1 = Bones glued.
+2 = Bones set.
+Cavity is just representing the cavity implant surgeries, and can be 2 values.
+0 = Cavity Closed
+1 = Cavity Open
+burn_stage and brute_stage are literally only used for repairing brute/burn damage to limbs
+I have no idea why you would ever perform these surgeries, given that Bicaradine and Kelotane exist.
+So I'm not even going to bother trying to represent them here. Fuck it.</p></main>
+<footer>
+    vorestation.dme
+    <a href="https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/326815dfb7907ff359a42d9b7d259f645c74414c">326815d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.3.0</a></footer>
+</body>
+</html>
